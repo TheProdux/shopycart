@@ -822,8 +822,12 @@ text-align: center;
 
 @media only screen and (max-width: 768px) {
     .banner {
+        background-image: url(../img/banner-2.png);
+        background-size: 100%;
         height: 70vh;
+        background-repeat: no-repeat;
         width: 100%;
+        background-position: top;
     }
     .brand1 h1 {
         font-size: 100%;
@@ -918,6 +922,25 @@ text-align: center;
         margin-top: 3%;
         font-size: 100%;
     }
+
+    .text{
+            width: 60vw;
+            height: 74vw;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 22px;
+        bottom: 0;
+        left: 22px;
+        right: 0;
+        height: 76%;
+        width: 85%;
+        opacity: 0;
+        transition: 0.5s ease;
+        background-color: #f05a24ad;
+    }
+
     .pop-temp1,
     .pop-temp2,
     .pop-temp3,
@@ -927,13 +950,24 @@ text-align: center;
         margin: 0 auto;
         width: 80%;
         float: left;
-        height: 57vh;
+        height: 55vh;
         background: #ffffff;
         margin-left: 10%;
         margin-top: 4%;
         box-shadow: 3px 4px 4px #4e4e4e;
         border-radius: 8%;
+        margin-bottom: 5vw;
     }
+
+    .pop-temp1 p, .pop-temp2 p, .pop-temp3 p, .pop-temp4 p, .pop-temp5 p, .pop-temp6 p {
+        color: #000;
+        font-size: 8vw !important;
+        text-align: center !important;
+        margin-left: 4vh !important;
+        /* width: 100% !important; */
+        margin-top: 5.5vw !important;
+    }
+
     .pop-temp1 img,
     .pop-temp2 img,
     .pop-temp3 img,
@@ -1027,7 +1061,7 @@ text-align: center;
     .price {
         /* height: 150vh; */
         position: relative;
-        top: 587vh;
+        top: 618vh;
     }
 
     .price h1 {
@@ -1060,7 +1094,15 @@ text-align: center;
     .prc1, .prc3 {
         border: 2px solid #927FD2;
         width: 66%;
-        margin-top: 1.5vw;
+        margin-top: 13.5vw;
+        border-radius: 8px;
+        margin-left: 15vw;
+    }
+
+    .prc2 {
+        border: 2px solid #FF4546;
+        width: 66%;
+        margin-top: 13.5vw;
         border-radius: 8px;
         margin-left: 15vw;
     }
@@ -1069,6 +1111,132 @@ text-align: center;
         color: #927FD2 !important;
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: 8vw;
+        margin-left: -5vw;
+    }
+
+    .prc2 h1 {
+        color: #FF4546 !important;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+        margin-left: -4vw !important;
+    }
+
+    .top-sell {
+        position: absolute;
+        top: -9.8vw;
+        left: 11.5vw;
+        height: 7vw;
+        width: 35vw;
+        background: #FF4546;
+    }
+
+    .top-sell p {
+        font-size: 2.8vw !important;
+        color: #fff !important;
+        margin-top: -18.2vw;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+        width: 100% !important;
+    }
+
+    .top-sell i {
+        position: absolute;
+        top: 0.5vw;
+        color: #FF4546;
+        font-size: 8.5vw;
+        margin-left: 15.5vw;
+        margin-top: 3vw;
+    }
+
+    .stand2 {
+        height: 41vw;
+        border-bottom: 1px solid #666;
+    }
+
+    .strike2 p {
+        font-size: 4.5vw;
+    margin-left: -16vw !important;
+    text-align: left;
+    color: #aaa;
+    margin-top: -7vw;
+    }
+
+    .off1, .off3 {
+        position: absolute;
+        float: left;
+        height: 7.5vw;
+        width: 25vw;
+        background: #927FD2;
+        margin-top: 12.5vw;
+        margin-left: 23vw;
+    }
+
+    .off2 {
+        float: left;
+        height: 7.5vw;
+        width: 24vw;
+        background: #FF4546;
+        margin-top: 12.5vw;
+        margin-left: 23vw;
+    }
+
+   .off1 p, .off3 p {
+        position: absolute !important;
+        color: #fff !important;
+        text-align: left;
+        margin-top: -1.5vw;
+        font-size: 4.3vw;
+        /* width: 6vw; */
+        float: left;
+        margin-left: 2vw !important;
+        top: 2vw !important;
+    }
+
+    .off2 p  {
+        position: absolute !important;
+        color: #fff !important;
+        text-align: left;
+        margin-top: -7.5vw;
+        margin-left: -16vw !important;
+        font-size: 4.3vw;
+        float: left;
+    }
+
+    .off1 i, .off3 i {
+        color: #927FD2;
+        float: left;
+        margin-left: -3.6vw;
+        font-size: 5vw;
+        margin-top: 0.8vw;
+    }
+
+    
+.off2 i {
+    position: absolute;
+    top: 0;
+    left: 14vw;
+    color: #FF4546;
+    font-size: 6vw;
+}
+
+    .rupee1 p, .rupee3 p {
+        color: #927FD2 !important;
+        font-size: 9.7vw !important;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+        margin-left: -3vw !important;
+    }
+
+    .rupee2 p {
+        color: #FF4546 !important;
+        font-size: 10vw !important;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+        margin-left: -2vw !important;
+    }
+
+    .rupee1 i, .rupee3 i {
+        font-size: 4.7vw !important;
+    }
+
+    .rupee2 i {
+        font-size: 6vw !important;
     }
 
 .get-strt1 button, .get-strt3 button {
@@ -1079,7 +1247,18 @@ text-align: center;
     margin-left: 7.5vw;
     box-shadow: 3px 2px 7px #404040;
     height: 10vw;
-    margin-top: 50vw;
+    margin-top: 20vw;
+}
+
+.get-strt2 button {
+    background: #FF4546;
+    color: #fff;
+    border-radius: 2vw;
+    width: 36vw;
+    margin-left: 7.5vw;
+    box-shadow: 3px 2px 7px #404040;
+    height: 10vw;
+    margin-top: 20vw;
 }
 
 .get-strt1 ul, .get-strt2 ul, .get-strt3 ul {
@@ -1094,7 +1273,141 @@ text-align: center;
     margin-bottom: 2vw;
 }
 
+.get-strt1 p, .get-strt2 p, .get-strt3 p {
+    font-size: 4vw !important;
+    margin-top: 24vw;
+    margin-left: -1vw;
+}
 
+.contact {
+    top: 717vh;
+    height: 70vh;
+    position: relative;
+    background-image: url(../img/banner-08.png);
+    background-size: 302%;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.cont1 {
+    float: left;
+    margin-top: 15%;
+    height: 53%;
+    width: 90vw;
+}
+
+.cont1 h1 {
+    margin-top: 0%;
+    color: #EF5A24;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 6.5vw;
+    text-align: left;
+    font-weight: 600;
+    font-style: italic;
+    margin-left: 10%;
+    margin-bottom: 5vw;
+}
+
+.submit {
+    background: #000;
+    color: #fff;
+    border-radius: 0px;
+    width: 20vw;
+    margin-left: 50vw;
+    box-shadow: 3px 3px 12px #00010a;
+}
+
+.cont2 {
+    float: left;
+    margin-top: 10%;
+    height: 40%;
+    width: 80vw;
+}
+.cont2 img {
+    display: none;
+}
+
+.social {
+    position: absolute;
+    margin-top: 8vw;
+    margin-left: 3vw;
+}
+
+.social a {
+    display: inline-block;
+    height: 9.5vw;
+    width: 9.5vw;
+    background-image: url(../img/social.png);
+    background-size: 100%;
+    background-position: center;
+    text-align: center;
+    background-repeat: no-repeat;
+    margin-left:10vw;
+}
+
+.social i {
+    color: #fff !important;
+    font-size: 3.2vw;
+    margin-top: 3.5vw;
+}
+
+.cont-link {
+    margin-top: -5vw;
+    margin-left: 7vw;
+    width: 100%;
+}
+
+.cont-link a {
+    color: #000 !important;
+    display:inline-block !important; 
+    text-align: right;
+    margin-right: 5vw;
+    font-size: 4.5vw;
+    margin-top: 2vw;
+    font-weight: 500;
+    margin-left: 4vw;
+}
+
+.footer {
+    position: relative;
+    height: 30vw;
+    background: rgb(59, 59, 59);
+    top: 1271vw;
+}
+
+.footer p {
+    color: #fff;
+    padding-top: 0.5vw;
+    text-align: center;
+    width: 100%;
+    float: right;
+    font-size: 4vw;
+    margin-top: -15vw;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #222 !important;
+    font-size: 16px !important;
+    font-weight: 400;
+    /* Firefox */
+}
+
+
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #222 !important;
+    font-size: 16px !important;
+    font-weight: 400;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #222 !important;
+    font-size: 16px !important;
+    font-weight: 400;
+}
     
     
 }
