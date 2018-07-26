@@ -13,7 +13,7 @@ body {}
 }
 
 .nav-item {
-    font-size: 15px !important;
+    font-size: 1.5vw !important;
     width: 140% !important;
     text-align: center !important;
 }
@@ -285,7 +285,7 @@ body {}
 
 .popular {
     position: absolute;
-    top:300vh;
+    top: 300vh;
     height: 220vh;
     width: 100%;
     background-image: url(../img/bg1.png);
@@ -330,7 +330,6 @@ body {}
     margin: 0 auto;
     width: 25%;
     float: left;
-    height: 63vh;
     background: #ffffff;
     margin-left: 6%;
     margin-top: 4%;
@@ -345,11 +344,11 @@ body {}
 .pop-temp5 img,
 .pop-temp6 img {
     display: block;
-    width: 94%;
+    width: 100%;
     margin-top: 10%;
     height: 75%;
-    margin-left: 4%;
-    box-shadow: 0px 0px 10px #1b1e21;
+    margin-left: 0%;
+    box-shadow: 0px 0px 5px #777;
 }
 
 .pop-temp1 p,
@@ -363,7 +362,9 @@ body {}
     text-align: left;
     margin-left: 1vh;
     width: 100%;
-    margin-top: 5.5%;
+    height: 5vh;
+    margin-top: 0;
+    float: left;
 }
 
 .pop-temp1 p:hover,
@@ -379,12 +380,11 @@ body {}
 
 .overlay {
     position: absolute;
-    top: 24px;
+    top: 0px;
     bottom: 0;
-    left: 23px;
+    left: 0px;
     right: 0;
-    height: 73%;
-    width: 85%;
+    width: 100%;
     opacity: 0;
     transition: 0.5s ease;
     background-color: #f05a24ad;
@@ -473,9 +473,9 @@ body {}
 }
 
 .why {
-    top: 390vh;
-    height: 100vh;
     position: relative;
+    height: 100vh;
+    margin-top: 365vh;
     background-image: url(../img/banner-08.png);
     background-size: 100%;
     background-repeat: no-repeat;
@@ -509,9 +509,9 @@ body {}
 }
 
 .price {
-    height: 140vh;
+    height: 110vh;
     position: relative;
-    top: 395vh;
+    margin-top: 0vh;
 }
 
 .price h1 {
@@ -736,8 +736,8 @@ width:100%;
 }
 
 .contact {
-    top:395vh;
-    height: 110vh;
+    margin-top: 0vh;
+    height: 80vh;
     position: relative;
     background-image: url(../img/banner-08.png);
     background-size: 125%;
@@ -802,9 +802,9 @@ width:100%;
 }
 
 .cont2 img{
-    position: absolute;
-    bottom: 5vw;
-    left: 30vw;
+    float: right;
+    margin-top: 7vh;
+    margin-right: 5vw;
 }
 
 .cont2 a{
@@ -847,10 +847,8 @@ width:100%;
 
 
 .footer{
-    position: relative;
     height: 10vw;
     background: rgb(59, 59, 59);
-    top: 185vw;
 }
 
 .footer p{
@@ -859,6 +857,7 @@ width:100%;
 text-align: center;
 }
 
+
 /*-------------Media Query-------------------*/
 /*-------------Media Query-------------------*/
 /*-------------Media Query-------------------*/
@@ -866,92 +865,62 @@ text-align: center;
 /*-------------Media Query-------------------*/
 
 @media only screen and (max-width: 768px) {
+
+    
+.collapse1{
+    background: rgb(240, 124, 77);
+    color: rgb(255, 255, 255) !important;
+}
+
+.navbar-nav {
+    margin-right: 0px !important;
+    margin-left: auto;
+    width: 100%;
+    /* background: #f07c4d; */
+}
+
+.nav-item {
+    font-size: 4vw !important;
+    width: 100% !important;
+    text-align: center !important;
+    border-bottom: 2px solid #ec8e68;
+}
     .banner {
-        background-image: url(../img/banner-2.png);
+        background-image: url(../img/banner-mobile.png);
         background-size: 100%;
-        height: 70vh;
+        height: 60vh;
         background-repeat: no-repeat;
         width: 100%;
         background-position: top;
     }
     .brand1 h1 {
-        top: 10vh;
-        font-size: 4.5vw;
+       display: none;
     }
     .brand1 p {
-        font-size: 2.5vw;
-        top: 22vh;
-        /* width: 90%; */
+        display: none;
     }
     .brand1 button {
-        top: 50vh;
+        top: 25vh;
         left: 4%;
         width: 35%;
         height: 6%;
         font-size: 80%;
     }
-    .cloud1 {
-        top: 31vh;
-    left: 0vh;
-    width: 27%;
+    .cloud1,
+    .cloud2, 
+    .cloud3,
+    .cloud4,
+    .cloud5,
+    .shop,
+    .bird1,
+    .bird2,
+    .bird3,
+    .bird4,
+    .bird5,
+    .tree{
+        display:none;
     }
-    .cloud2 {
-        top: 36vh;
-    width: 28%;
-    }
-    .cloud3 {
-        top: 29vh;
-    width: 25%;
-    }
-    .cloud4 {
-        top: 10vh;
-        width: 82%;
-        right: -1vh;
-        float: right;
-    }
-
-    .cloud5{
-        position: absolute;
-        top: 45vh;
-        width: 21%;
-        left: 24vw;
-        display: block;
-    }
-
-    .shop {
-        top: 4vh;
-    width: 55%;
-    left: 9vh;
-    float: right;
-    }
-    .bird1 {
-        top: 44vh;
-    width: 3%;
-    }
-    .bird2 {
-        top: 42vh;
-    width: 2%;
-    }
-    .bird3 {
-        top: 45vh;
-    width: 3%;
-    right: 18vh;
-    }
-    .bird4 {
-        top: 40vh;
-    width: 3%;
-    right: 18vh;
-    }
-    .bird5 {
-        top: 39vh;
-    right: 14vh;
-    width: 3%;
-    }
-    .tree {
-        top: 37vh;
-    right: 14vw;
-    width: 10%;
-    }
+    
     .cartoon {
         position: absolute;
     top: 10vh;
@@ -964,7 +933,7 @@ text-align: center;
         width: 100%;
         background: rgb(255, 255, 255);
         position: absolute;
-        top: 70vh;
+        top: 60vh;
     }
 
     .work h1{
@@ -1008,14 +977,13 @@ text-align: center;
 
     .popular {
         position: absolute;
-        top: 210%;
-        height: 420vh;
-        width: 100%;
-        background-image: url(../img/bg1.png);
-        background-position: top;
-        background-size: 740vw;
-        background-repeat: no-repeat;
-        margin-top: 10%;
+    height: 350vh;
+    width: 100%;
+    background-image: url(../img/bg1.png);
+    background-position: center;
+    background-size: 650vw;
+    background-repeat: no-repeat;
+    margin-top: -75vh;
     }
     .popular p {
         color: #666666;
@@ -1033,12 +1001,12 @@ text-align: center;
 
     .overlay {
         position: absolute;
-        top: 22px;
+        top: 0;
         bottom: 0;
-        left: 22px;
+        left: 0px;
         right: 0;
-        height: 76%;
-        width: 85%;
+        /* height: 76%; */
+        width: 100%;
         opacity: 0;
         transition: 0.5s ease;
         background-color: #f05a24ad;
@@ -1053,7 +1021,7 @@ text-align: center;
         margin: 0 auto;
         width: 80%;
         float: left;
-        height: 55vh;
+        /* height: 55vh; */
         background: #ffffff;
         margin-left: 10%;
         margin-top: 4%;
@@ -1064,11 +1032,11 @@ text-align: center;
 
     .pop-temp1 p, .pop-temp2 p, .pop-temp3 p, .pop-temp4 p, .pop-temp5 p, .pop-temp6 p {
         color: #000;
-        font-size: 8vw !important;
+        font-size: 6vw !important;
         text-align: center !important;
-        margin-left: 4vh !important;
+        margin-left: 0vh !important;
         /* width: 100% !important; */
-        margin-top: 5.5vw !important;
+        margin-top: 0;
     }
 
     .pop-temp1 img,
@@ -1078,16 +1046,14 @@ text-align: center;
     .pop-temp5 img,
     .pop-temp6 img {
         display: block;
-        width: 94%;
+        width: 100%;
         margin-top: 10%;
         height: 78%;
-        margin-left: 4%;
+        margin-left: 0%;
     }
 
     .benefit{
-        height: 150vh;
-        position: relative;
-        top: 565vh;
+        margin-top:120vh;
     }
 
     .bnf1, .bnf2, .bnf3, .bnf4, .bnf5, .bnf6 {
@@ -1125,9 +1091,10 @@ text-align: center;
     }
 
     .why {
-        top: 1340vw;
+        margin-top: 585vh;
         height: 40vh;
-        position: relative;
+        /* position: relative; */
+        /* float: left; */
         background-image: url(../img/banner-08.png);
         background-size: 168%;
         background-repeat: no-repeat;
@@ -1162,9 +1129,7 @@ text-align: center;
     }
 
     .price {
-        /* height: 150vh; */
-        position: relative;
-        top: 755vh;
+        margin-top: 0vh;
     }
 
     .price h1 {
@@ -1383,7 +1348,7 @@ text-align: center;
 }
 
 .contact {
-    top: 860vh;
+    margin-top: 120vh;
     height: 70vh;
     position: relative;
     background-image: url(../img/banner-08.png);
@@ -1472,10 +1437,11 @@ text-align: center;
 }
 
 .footer {
-    position: relative;
-    height: 30vw;
-    background: rgb(59, 59, 59);
-    top: 1526vw;
+       /* position: relative; */
+       height: 30vw;
+       background: rgb(59, 59, 59);
+       /* bottom: 27px; */
+       margin-top: -7vh;
 }
 
 .footer p {
