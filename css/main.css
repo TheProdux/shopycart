@@ -736,7 +736,7 @@ width:100%;
 }
 
 .contact {
-    margin-top: 0vh;
+    margin-top: 10vh;
     height: 80vh;
     position: relative;
     background-image: url(../img/banner-08.png);
@@ -747,7 +747,7 @@ width:100%;
 
 .cont1 {
     float: left;
-    margin-top: 10%;
+    margin-top: 10vh;
     height: 70%;
     width: 50vw;
 }
@@ -796,7 +796,7 @@ width:100%;
 
 .cont2{
     float: left;
-    margin-top: 10%;
+    margin-top: 2vh;
     height: 70%;
     width: 50vw;
 }
@@ -819,6 +819,8 @@ width:100%;
 
 .cont-link{
     margin-top: 18vw;
+    width: 10vw;
+    margin-left: 38vw;
 }
 
 .social {
@@ -977,11 +979,11 @@ text-align: center;
 
     .popular {
         position: absolute;
-    height: 350vh;
+    height: 380vh;
     width: 100%;
     background-image: url(../img/bg1.png);
     background-position: center;
-    background-size: 650vw;
+    background-size: 631vw;
     background-repeat: no-repeat;
     margin-top: -75vh;
     }
@@ -1053,7 +1055,7 @@ text-align: center;
     }
 
     .benefit{
-        margin-top:120vh;
+        margin-top: 150vh;
     }
 
     .bnf1, .bnf2, .bnf3, .bnf4, .bnf5, .bnf6 {
@@ -1348,7 +1350,7 @@ text-align: center;
 }
 
 .contact {
-    margin-top: 120vh;
+    margin-top: 133vh;
     height: 70vh;
     position: relative;
     background-image: url(../img/banner-08.png);
@@ -1477,7 +1479,7 @@ text-align: center;
     font-size: 16px !important;
     font-weight: 400;
 }
-    
+
     
 }
 
@@ -1487,8 +1489,28 @@ text-align: center;
 
 
 
-
-
+.scrollToTop {
+    bottom: 60px;
+    color: #ffffff;
+    display: none;
+    font-size: 30px;
+    line-height: 50px;
+    position: fixed;
+    right: 20px;
+    text-align: center;
+    text-decoration: none;
+    width: 8vh;
+    z-index: 999;
+    -webkit-transition: all 1s ease 0.5s;
+    transition: all 1s ease 0.5s;
+    height:8vh;
+    border-radius: 10px;
+    background: #EF5A24;
+}
+.scrollToTop:hover{
+    background: #ffffff;
+    color: #EF5A24;
+}
 
 
 ::placeholder {
