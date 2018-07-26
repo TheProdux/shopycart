@@ -55,6 +55,10 @@ body {}
     width: 90%;
 }
 
+.cloud5{
+    display: none;
+}
+
 .shop {
     position: absolute;
     top: 15%;
@@ -151,7 +155,7 @@ body {}
     width: 12%;
 }
 
-.floating1 {
+.floating1, .floating5 {
     animation-name: floating1;
     animation-duration: 25s;
     animation-iteration-count: infinite;
@@ -236,21 +240,58 @@ body {}
 }
 
 .work {
-    height: 150vh;
+    height: 175vh;
     width: 100%;
     background: rgb(255, 255, 255);
+    position: absolute;
+    top: 133vh;
+}
+
+.work h1{
+    color: #f05a24;
+    font-family: Trebuchet MS;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+.work p {
+    color: #666666;
+    text-align: center;
+    width: 75%;
+    margin-left: 13%;
+    margin-top:5vw;
+    font-size: 100%;
+}
+
+.work1{
+    width:80vw;
+    margin-left: 10vw;
+    margin-top: 10vh;
+}
+
+.work2{
+    width: 80vw;
+    margin-left: 10vw;
+    margin-top: 0vh;
+}
+
+.work3,
+.work4,
+.work5,
+.work6,
+.work7{
+    display:none;
 }
 
 .popular {
     position: absolute;
-    top: 210%;
+    top:300vh;
     height: 220vh;
     width: 100%;
     background-image: url(../img/bg1.png);
     background-position: top;
     background-size: 100%;
     background-repeat: no-repeat;
-    margin-top: 10%;
 }
 
 .popular h1 {
@@ -367,7 +408,7 @@ body {}
 .benefit {
     height: 150vh;
     position: relative;
-    top: 170vh;
+    top: 390vh;
 }
 
 .benefit h1 {
@@ -432,7 +473,7 @@ body {}
 }
 
 .why {
-    top: 165vh;
+    top: 390vh;
     height: 100vh;
     position: relative;
     background-image: url(../img/banner-08.png);
@@ -468,9 +509,9 @@ body {}
 }
 
 .price {
-    height: 150vh;
+    height: 140vh;
     position: relative;
-    top: 170vh;
+    top: 395vh;
 }
 
 .price h1 {
@@ -695,7 +736,7 @@ width:100%;
 }
 
 .contact {
-    top: 205vh;
+    top:395vh;
     height: 110vh;
     position: relative;
     background-image: url(../img/banner-08.png);
@@ -762,8 +803,8 @@ width:100%;
 
 .cont2 img{
     position: absolute;
-    bottom:0;
-    left:30vw;
+    bottom: 5vw;
+    left: 30vw;
 }
 
 .cont2 a{
@@ -809,7 +850,7 @@ width:100%;
     position: relative;
     height: 10vw;
     background: rgb(59, 59, 59);
-    top: 95vw;
+    top: 185vw;
 }
 
 .footer p{
@@ -818,6 +859,10 @@ width:100%;
 text-align: center;
 }
 
+/*-------------Media Query-------------------*/
+/*-------------Media Query-------------------*/
+/*-------------Media Query-------------------*/
+/*-------------Media Query-------------------*/
 /*-------------Media Query-------------------*/
 
 @media only screen and (max-width: 768px) {
@@ -830,79 +875,137 @@ text-align: center;
         background-position: top;
     }
     .brand1 h1 {
-        font-size: 100%;
+        top: 10vh;
+        font-size: 4.5vw;
     }
     .brand1 p {
-        font-size: 70%;
-        top: 40%;
-        width: 90%;
+        font-size: 2.5vw;
+        top: 22vh;
+        /* width: 90%; */
     }
     .brand1 button {
-        top: 52%;
+        top: 50vh;
         left: 4%;
         width: 35%;
         height: 6%;
         font-size: 80%;
     }
     .cloud1 {
-        top: 57vh;
-        left: 5vh;
-        width: 34%;
+        top: 31vh;
+    left: 0vh;
+    width: 27%;
     }
     .cloud2 {
-        top: 43vh;
-        width: 30%;
+        top: 36vh;
+    width: 28%;
     }
     .cloud3 {
-        top: 48vh;
-        width: 30%;
+        top: 29vh;
+    width: 25%;
     }
     .cloud4 {
-        top: 17vh;
-        width: 75%;
-        right: 4vh;
+        top: 10vh;
+        width: 82%;
+        right: -1vh;
         float: right;
     }
+
+    .cloud5{
+        position: absolute;
+        top: 45vh;
+        width: 21%;
+        left: 24vw;
+        display: block;
+    }
+
     .shop {
-        top: 7vh;
-        width: 50%;
-        /* left: 35vh; */
-        float: right;
+        top: 4vh;
+    width: 55%;
+    left: 9vh;
+    float: right;
     }
     .bird1 {
-        top: 72vh;
-        width: 4%;
+        top: 44vh;
+    width: 3%;
     }
     .bird2 {
-        top: 65vh;
-        width: 4%;
+        top: 42vh;
+    width: 2%;
     }
     .bird3 {
-        top: 69vh;
-        width: 5%;
-        right: 30vh;
+        top: 45vh;
+    width: 3%;
+    right: 18vh;
     }
     .bird4 {
-        top: 60vh;
-        width: 4%;
-        right: 33vh;
+        top: 40vh;
+    width: 3%;
+    right: 18vh;
     }
     .bird5 {
-        top: 61vh;
-        right: 26vh;
-        width: 4%;
+        top: 39vh;
+    right: 14vh;
+    width: 3%;
     }
     .tree {
-        top: 58%;
-        right: 10%;
-        width: 16%;
+        top: 37vh;
+    right: 14vw;
+    width: 10%;
     }
     .cartoon {
         position: absolute;
-        top: 10vh;
-        right: 10vh;
-        height: 20vh;
+    top: 10vh;
+    right: 10vh;
+    height: 17vh;
     }
+
+    .work {
+        height: 145vh;
+        width: 100%;
+        background: rgb(255, 255, 255);
+        position: absolute;
+        top: 70vh;
+    }
+
+    .work h1{
+        color: #f05a24;
+        font-family: Trebuchet MS;
+        text-align: center;
+        margin-top: 10%;
+    }
+
+    .work p {
+        color: #666666;
+        text-align: center;
+        width: 75%;
+        margin-left: 13%;
+        margin-top:5vw;
+        font-size: 100%;
+    }
+
+    .work1, .work2{
+        display:none;
+    }
+
+    .work3,
+    .work4,
+    .work5,
+    .work6{
+        display: inline-block;
+    width: 40vw;
+    height: 30vh;
+    margin-left: 5vw;
+    margin-top: 5vh;
+    }
+
+    .work7{
+        display:block;
+        width:40vw;
+        height: 30vh;
+        margin-left:28vw;
+        margin-top: 5vh;
+    }
+
     .popular {
         position: absolute;
         top: 210%;
@@ -983,17 +1086,17 @@ text-align: center;
 
     .benefit{
         height: 150vh;
-    position: relative;
-    top: 417vh;
+        position: relative;
+        top: 565vh;
     }
 
     .bnf1, .bnf2, .bnf3, .bnf4, .bnf5, .bnf6 {
         width: 75%;
         margin: 0%;
         float: left;
-        margin-top: 7%;
+        margin-top: 20vh;
         margin-left: 10%;
-        height: 34%;
+        height: 35vh;
     }
 
     .bnf1 img, .bnf2 img, .bnf3 img, .bnf4 img, .bnf5 img, .bnf6 img {
@@ -1022,7 +1125,7 @@ text-align: center;
     }
 
     .why {
-        top: 1094vw;
+        top: 1340vw;
         height: 40vh;
         position: relative;
         background-image: url(../img/banner-08.png);
@@ -1061,7 +1164,7 @@ text-align: center;
     .price {
         /* height: 150vh; */
         position: relative;
-        top: 618vh;
+        top: 755vh;
     }
 
     .price h1 {
@@ -1280,7 +1383,7 @@ text-align: center;
 }
 
 .contact {
-    top: 717vh;
+    top: 860vh;
     height: 70vh;
     position: relative;
     background-image: url(../img/banner-08.png);
@@ -1329,7 +1432,7 @@ text-align: center;
 
 .social {
     position: absolute;
-    margin-top: 8vw;
+    margin-top: -2vw;
     margin-left: 3vw;
 }
 
@@ -1352,7 +1455,7 @@ text-align: center;
 }
 
 .cont-link {
-    margin-top: -5vw;
+    margin-top: -14vw;
     margin-left: 7vw;
     width: 100%;
 }
@@ -1372,7 +1475,7 @@ text-align: center;
     position: relative;
     height: 30vw;
     background: rgb(59, 59, 59);
-    top: 1271vw;
+    top: 1526vw;
 }
 
 .footer p {
