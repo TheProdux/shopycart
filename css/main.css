@@ -878,7 +878,8 @@ text-align: center;
     margin-right: 0px !important;
     margin-left: auto;
     width: 100%;
-    /* background: #f07c4d; */
+    background-image: url(../img/cloud1.png);
+
 }
 
 .nav-item {
@@ -1034,10 +1035,10 @@ text-align: center;
 
     .pop-temp1 p, .pop-temp2 p, .pop-temp3 p, .pop-temp4 p, .pop-temp5 p, .pop-temp6 p {
         color: #000;
-        font-size: 6vw !important;
+        font-size: 8vw !important;
         text-align: center !important;
         margin-left: 0vh !important;
-        /* width: 100% !important; */
+        width: 100% !important;
         margin-top: 0;
     }
 
@@ -1094,11 +1095,11 @@ text-align: center;
 
     .why {
         margin-top: 585vh;
-        height: 40vh;
+        height: 48vh;
         /* position: relative; */
         /* float: left; */
         background-image: url(../img/banner-08.png);
-        background-size: 168%;
+        background-size: 190%;
         background-repeat: no-repeat;
         background-position: top;
     }
@@ -1124,7 +1125,7 @@ text-align: center;
         margin-top: 5%;
         color: #525151;
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: 3vw;
+        font-size: 3.5vw;
         text-align: center;
         font-weight: bold;
         font-style: italic;
@@ -1399,20 +1400,20 @@ text-align: center;
 
 .social {
     position: absolute;
-    margin-top: -2vw;
+    margin-top: 10vw;
     margin-left: 3vw;
 }
 
 .social a {
     display: inline-block;
-    height: 9.5vw;
-    width: 9.5vw;
+    height: 11.5vw;
+    width: 11.5vw;
     background-image: url(../img/social.png);
-    background-size: 101%;
+    background-size: 100%;
     background-position: center;
     text-align: center;
     background-repeat: no-repeat;
-    margin-left:10vw;
+    margin-left: 8vw;
 }
 
 .social i {
@@ -1422,7 +1423,7 @@ text-align: center;
 }
 
 .cont-link {
-    margin-top: -14vw;
+    margin-top: -5vw;
     margin-left: 7vw;
     width: 100%;
 }
@@ -1490,12 +1491,12 @@ text-align: center;
 
 
 .scrollToTop {
+    display: none;
+    position: fixed;
     bottom: 60px;
     color: #ffffff;
-    display: none;
     font-size: 30px;
     line-height: 50px;
-    position: fixed;
     right: 20px;
     text-align: center;
     text-decoration: none;
