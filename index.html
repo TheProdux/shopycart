@@ -19,20 +19,29 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-light col-md-12">
-        <a class="navbar-brand" href="#"><img src="img/shopycrtlogo.png"></a>
+        <a class="navbar-brand" href="index.html"><img src="img/shopycrtlogo.png"></a>
         <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
         <div class="collapse collapse1 navbar-collapse justify-content-end" id="navbarText" style="color: #fff !important;">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Templates</a>
+                    <a class="nav-link" href="#">Features</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="#">Packages</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
+                    <a class="nav-link" href="#">Store</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Demo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
                 </li>
             </ul>
         </div>
@@ -43,9 +52,14 @@
     <div class="banner" id="banner">
 
         <div class="brand1" id="brand1">
-            <h1>The ecommerece plateform designed for you</h1>
-            <p>With complete control over the look and feel, you finally have a gorgeous store of your own that reflects the personality of your business</p>
-            <a href="#"><button>Start now!</button></a>
+            <h1 class="h1">The ecommerece plateform designed for you</h1>
+            <p class="p1">With complete control over the look and feel, you finally have a gorgeous store of your own that reflects the personality of your business</p>
+            <h1 class="h2">Kick-start your new online store!</h1>
+            <p class="p2">With complete control over the look and feel, you finally have a gorgeous store of your own that reflects the personality of your business</p>
+            <h1 class="h3">Worried?</h1>
+            <h2 class="h4">of getting lost in the sea?</h2>
+            <p class="p3">With complete control over the look and feel, you finally have a gorgeous store of your own that reflects the personality of your business</p>
+
             <div class="cartoon col-5">
                 <img class="cloud4 floating4" src="img/cloud4.png">
                 <img class="shop" src="img/shop.png">
@@ -73,9 +87,21 @@
             <img class="tree3" id="tree3" src="img/Tree-3.png">
         </div>
 
+        <div class="illustrate3" id="illustrate3">
+            <img class="man" id="man" src="img/man.png">
+            <img class="bag" id="bag" src="img/bag.png">
+            <img class="wave1" src="img/wave1.png">
+            <img class="wave2" src="img/wave2.png">
+            <img class="wave3" src="img/wave3.png">
+            <img class="wave4" src="img/wave4.png">
+            <img class="wave5" src="img/wave5.png">
+        </div>
+        <div class="brand1">
+            <a href="#"><button>Start now!</button></a>
+        </div>
     </div>
 
-    <div class="work">
+    <div class="work" id="work">
         <h1>How It Works</h1>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
         <img class="work1" src="img/work-1.png">
@@ -310,7 +336,7 @@
         </div>
     </div>
 
-    <div class="contact">
+    <div class="contact" id="contact">
         <div class="cont1 col-md-6">
             <h1>Contact Us</h1>
             <form action="">
@@ -328,9 +354,9 @@
         </div>
         <div class="cont2 col-md-6">
             <div class="social">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
             </div>
             <div class="cont-link">
                 <a href="#">Address</a>
@@ -338,7 +364,7 @@
                 <a href="#">Email</a>
             </div>
 
-            <img src="img/shopycrtlogo.png">
+            <a href="index.html" title="ShopyCart"> <img src="img/shopycrtlogo.png"></a>
         </div>
     </div>
 
@@ -365,7 +391,6 @@
             a.src = g;
             m.parentNode.insertBefore(a, m)
         })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
         ga('create', 'UA-44786853-1', 'shopycart.com');
         ga('send', 'pageview');
     </script>
