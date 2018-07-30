@@ -339,15 +339,15 @@
     <div class="contact" id="contact">
         <div class="cont1 col-md-6">
             <h1>Contact Us</h1>
-            <form action="">
+            <form action="contact-form-handler.php">
                 <div class="form-group">
-                    <input type="text" class="form-control" id="usr" placeholder="Name">
+                    <input type="text" name="name" class="form-control" id="usr" placeholder="Name">
                 </div>
                 <div class="form-group">
-                    <input type="email" class="form-control" id="email" placeholder="Email">
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Email">
                 </div>
                 <div class="form-group">
-                    <textarea class="form-control" rows="5" id="comment" placeholder="Message"></textarea>
+                    <textarea class="form-control" name="Message" rows="5" id="comment" placeholder="Message"></textarea>
                 </div>
                 <button type="submit" class="submit btn btn-default">Send</button>
             </form>
@@ -398,7 +398,9 @@
 </body>
 <footer class="page-footer footer font-small blue">
 
-    <p><i class="far fa-copyright"></i> All Rights are Reserved</p>
+    <p><i class="far fa-copyright"></i> All Rights are Reserved by
+        <a href="http://theprodux.com/"><img src="img/logo-footer.png"></a>
+    </p>
 
 </footer>
 
