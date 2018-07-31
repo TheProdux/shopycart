@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ShopyCart is an indian based readymade online software cart for your business, Create your online store with simple 3 steps">
+    <meta name="author" content="Produx Designs and Technologies">
+    <title>Shopycart | A readymade Custom Ecommerce Application for You | Best Ecommerce Platform in India </title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/store.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light col-md-12">
+        <a class="navbar-brand" href="index.html"><img src="img/shopycrtlogo.png"></a>
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+        <div class="collapse collapse1 navbar-collapse justify-content-end" id="navbarText" style="color: #fff !important;">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Packages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="store.html">Store</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Demo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <a class="scrollToTop" id="scrollToTop" href="#banner" style="display: inline;">
+        <i class="fa fa-angle-up"></i>
+    </a>
+    <!--  <div class="banner" id="banner">
+
+        <div class="brand1" id="brand1">
+            <h1 class="h1">The ecommerece plateform designed for you</h1>
+            <p class="p1">With complete control over the look and feel, you finally have a gorgeous store of your own that reflects the personality of your business</p>
+            <h1 class="h2">Kick-start your new online store!</h1>
+            <p class="p2">With complete control over the look and feel, you finally have a gorgeous store of your own that reflects the personality of your business</p>
+            <h1 class="h3">Worried?</h1>
+            <h2 class="h4">of getting lost in the sea?</h2>
+            <p class="p3">With complete control over the look and feel, you finally have a gorgeous store of your own that reflects the personality of your business</p>
+
+            <div class="cartoon col-5">
+                <img class="cloud4 floating4" src="img/cloud4.png">
+                <img class="shop" src="img/shop.png">
+            </div>
+        </div>
+        <div class="illustrate1" id="illustrate1">
+            <img class="cloud1 floating1" id="cloud1" src="img/cloud1.png">
+            <img class="cloud2 floating2" id="cloud2" src="img/cloud2.png">
+            <img class="cloud3 floating3" src="img/cloud3.png">
+            <img class="cloud5 floating5" src="img/cloud-5.png">
+            <img class="bird1" src="img/bird1.png">
+            <img class="bird2" src="img/bird2.png">
+            <img class="bird3" src="img/bird3.png">
+            <img class="bird4" src="img/bird4.png">
+            <img class="bird5" src="img/bird5.png">
+            <img class="tree" src="img/tree.png">
+        </div>
+
+        <div class="illustrate2" id="illustrate2">
+            <img class="boy-kite" id="boy-kite" src="img/boy-kite.png">
+            <img class="boy-cycle" id="boy-cycle" src="img/boy-cycle.png">
+            <img class="girl-dog" id="girl-dog" src="img/girl-dog.png">
+            <img class="tree1" id="tree1" src="img/Tree-1.png">
+            <img class="tree2" id="tree2" src="img/Tree-2.png">
+            <img class="tree3" id="tree3" src="img/Tree-3.png">
+        </div>
+
+        <div class="illustrate3" id="illustrate3">
+            <img class="man" id="man" src="img/man.png">
+            <img class="bag" id="bag" src="img/bag.png">
+            <img class="wave1" src="img/wave1.png">
+            <img class="wave2" src="img/wave2.png">
+            <img class="wave3" src="img/wave3.png">
+            <img class="wave4" src="img/wave4.png">
+            <img class="wave5" src="img/wave5.png">
+        </div>
+        <div class="brand1">
+            <a href="#"><button>Start now!</button></a>
+        </div>
+    </div> -->
+
+
+    <div class="store col-md-12">
+        <h1>STORE</h1>
+
+
+
+        <h2>Catagory</h2>
+
+        <div id="myBtnContainer" class=" col-md-4">
+            <ul>
+                <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                <li></li>
+                <li></li>
+                <button class="btn" onclick="filterSelection('electronic')"> Electronics</button>
+                <li></li>
+                <button class="btn" onclick="filterSelection('fancy')">Fancy</button>
+                <li></li>
+                <li> <button class="btn" onclick="filterSelection('foods')">Foods</button></li>
+            </ul>
+
+
+        </div>
+
+        <div class="container">
+            <div class="filterDiv fancy">
+                <div class="ele1">
+                    <img src="img/price-side.png">
+                    <div class="over">
+                        <a href="#">
+                            <i class="fas fa-eye"></i></a>
+                    </div>
+                    <div class="price-side1">
+                        <i class="fas fa-rupee-sign">.000</i>
+                        <a href="#"><button type="button" class="btn-price1 btn-small btn btn-success"><p>Buy</p></button> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="filterDiv colors foods">
+                <div class="ele2">
+                    <img src="img/price-side.png">
+                    <div class="over">
+
+                        <a href="#">
+                            <i class="fas fa-eye"></i></a>
+                    </div>
+                    <div class="price-side2">
+                        <i class="fas fa-rupee-sign">.000</i>
+                        <a href="#"><button type="button" class="btn-price2 btn-small btn btn-success"><p>Buy</p></button> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="filterDiv electronic">
+                <div class="ele3">
+                    <img src="img/price-side.png">
+                    <div class="over">
+                        <a href="#">
+                            <i class="fas fa-eye"></i></a>
+                    </div>
+                    <div class="price-side3">
+                        <i class="fas fa-rupee-sign">.000</i>
+                        <a href="#"><button type="button" class="btn-price3 btn-small btn btn-success"><p>Buy</p></button> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="filterDiv colors fancy">
+                <div class="ele4">
+                    <img src="img/price-side.png">
+                    <div class="over">
+
+                        <a href="#">
+                            <i class="fas fa-eye"></i></a>
+                    </div>
+                    <div class="price-side4">
+                        <i class="fas fa-rupee-sign">.000</i>
+                        <a href="#"><button type="button" class="btn-price4 btn-small btn btn-success"><p>Buy</p></button> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="filterDiv foods">
+                <div class="ele1">
+                    <img src="img/price-side.png">
+                    <div class="over">
+                        <a href="#">
+                            <i class="fas fa-eye"></i></a>
+                    </div>
+                    <div class="price-side1">
+                        <i class="fas fa-rupee-sign">.000</i>
+                        <a href="#"><button type="button" class="btn-price1 btn-small btn btn-success"><p>Buy</p></button> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="filterDiv colors electronic">
+                <div class="ele2">
+                    <img src="img/price-side.png">
+                    <div class="over">
+
+                        <a href="#">
+                            <i class="fas fa-eye"></i></a>
+                    </div>
+                    <div class="price-side2">
+                        <i class="fas fa-rupee-sign">.000</i>
+                        <a href="#"><button type="button" class="btn-price2 btn-small btn btn-success"><p>Buy</p></button> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="filterDiv foods">
+                <div class="ele3">
+                    <img src="img/price-side.png">
+                    <div class="over">
+                        <a href="#">
+                            <i class="fas fa-eye"></i></a>
+                    </div>
+                    <div class="price-side3">
+                        <i class="fas fa-rupee-sign">.000</i>
+                        <a href="#"><button type="button" class="btn-price3 btn-small btn btn-success"><p>Buy</p></button> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="filterDiv colors fancy">
+                <div class="ele4">
+                    <img src="img/price-side.png">
+                    <div class="over">
+
+                        <a href="#">
+                            <i class="fas fa-eye"></i></a>
+                    </div>
+                    <div class="price-side4">
+                        <i class="fas fa-rupee-sign">.000</i>
+                        <a href="#"><button type="button" class="btn-price4 btn-small btn btn-success"><p>Buy</p></button> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        filterSelection("all")
+
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/main.js"></script>
+<script src="app.js"></script>
+
+
+
+<!-- DO NOT DELETE -->
+<script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-44786853-1', 'shopycart.com');
+    ga('send', 'pageview');
+</script>
+<!-- DO NOT DELETE -->

@@ -2614,7 +2614,7 @@ select.form-control-lg:not([size]):not([multiple]) {
 .btn.focus,
 .btn:focus {
     outline: 0;
-    box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25)
+    box-shadow: 0 0 0 .2rem rgba(0, 123, 255, 0)
 }
 
 .btn.disabled,
@@ -4552,7 +4552,6 @@ tbody.collapse.show {
 .navbar-light .navbar-brand:hover {
     color: rgba(0, 0, 0, .9)
 }
-
 
 .navbar-light .navbar-nav .nav-link {
     color: #fff;
