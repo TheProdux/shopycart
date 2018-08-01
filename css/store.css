@@ -1,5 +1,6 @@
 nav {
     background: #f3885d;
+    height: 6vh;
 }
 
 .store {
@@ -257,7 +258,7 @@ nav {
     color: #ddd;
 }
 
-.btn.active {
+.btn-cat.active {
     color: #f05a24;
     font-weight: bold;
     border: none !important;

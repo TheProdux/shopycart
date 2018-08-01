@@ -1,0 +1,161 @@
+.nav-item.active {
+    border-bottom: 2px solid #9124f0;
+    color: #9124f0 !important;
+    transition: .5s;
+    height: 6vh;
+}
+
+.navbar-brand img {
+    width: 10vw;
+}
+
+.about {
+    position: relative;
+    height: 100vh;
+    margin-top: 6vh;
+    background-image: url(../img/about-1.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.about h1,
+.we h1,
+.get h1 {
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 5vw;
+    color: #ef5a24;
+    text-align: center;
+    border-bottom: 2px solid #ef5a24;
+    width: 50%;
+    margin-left: 25%;
+    font-weight: 400;
+    top: 28vh;
+}
+
+.approach,
+.who {
+    float: left;
+    margin-top: 0vh;
+    box-shadow: 0 0 6px #717070;
+}
+
+.approach h2,
+.who h2 {
+    float: left;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 3vw;
+    color: #ef5a24;
+    width: 65%;
+    height: 9vh;
+    margin-top: 22vh;
+}
+
+.approach p,
+.who p {
+    float: left;
+    margin: 0 auto;
+    margin-top: 15vh;
+    width: 80vh;
+    font-size: 1.4vw;
+    text-align: justify;
+    font-weight: 500;
+    margin-bottom: 15vh;
+}
+
+.approach i {
+    position: absolute;
+    color: #ef5a24;
+    font-size: 15vw;
+    opacity: 0.2;
+    margin-left: 6vw;
+    margin-top: 10vh;
+}
+
+.we {
+    position: relative;
+    height: 100vh;
+    margin-top: 55vh;
+    background-image: url(../img/about-2.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.get {
+    position: relative;
+    height: 100vh;
+    margin-top: 55vh;
+    background-image: url(../img/about-3.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.social-cube {
+    margin: 0 auto;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.social-cube h2 {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 3vw;
+    color: #ef5a24;
+    width: 65%;
+    height: 9vh;
+    margin-top: 10vh;
+}
+
+.facebook,
+.google,
+.twitter,
+.instagram {
+    width: 25%;
+    float: left;
+}
+
+.facebook img,
+.google img,
+.twitter img,
+.instagram img {
+    width: 80%;
+}
+
+.facebook i {
+    position: absolute;
+    color: #fff;
+    font-size: 5vw;
+    left: 4vw;
+    top: 13vh;
+}
+
+.google i {
+    position: absolute;
+    color: #fff;
+    font-size: 5vw;
+    left: 14vw;
+    top: 14vh;
+}
+
+.twitter i {
+    position: absolute;
+    color: #fff;
+    font-size: 5vw;
+    left: 26.5vw;
+    top: 15vh;
+}
+
+.instagram i {
+    position: absolute;
+    color: #fff;
+    font-size: 5vw;
+    left: 38.5vw;
+    top: 13vh;
+}

@@ -47,3 +47,44 @@ var src10 = ["img/tree.png", " "];
 //$('<div class="' + illu[Math.floor(Math.random() * illu.length)] + '" style="display:block;"></div>').appendTo('#banner');
 
 //$('<div class="' + illu[Math.floor(Math.random() * illu.length)] + '" id="' + illu[Math.floor(Math.random() * illu.length)] + '"><img class="' + cloud1[Math.floor(Math.random() * cloud1.length)] + ' floating1"  src=' + src1[Math.floor(Math.random() * src1.length)] + '><img class="' + cloud2[Math.floor(Math.random() * cloud2.length)] + ' floating2"  src=' + src2[Math.floor(Math.random() * src2.length)] + '><img class="' + cloud3[Math.floor(Math.random() * cloud3.length)] + ' floating3" src="' + src3[Math.floor(Math.random() * src3.length)] + '"><img class="' + cloud5[Math.floor(Math.random() * cloud5.length)] + ' floating5" src="' + src4[Math.floor(Math.random() * src4.length)] + '"><img class="' + bird1[Math.floor(Math.random() * bird1.length)] + '" src="' + src5[Math.floor(Math.random() * src5.length)] + '"><img class="' + bird2[Math.floor(Math.random() * bird2.length)] + '" src="' + src6[Math.floor(Math.random() * src6.length)] + '"><img class="' + bird3[Math.floor(Math.random() * bird3.length)] + '" src="' + src7[Math.floor(Math.random() * src7.length)] + '"><img class="' + bird4[Math.floor(Math.random() * bird4.length)] + '" src="' + src8[Math.floor(Math.random() * src8.length)] + '"><img class="' + bird5[Math.floor(Math.random() * bird5.length)] + '" src="' + src9[Math.floor(Math.random() * src9.length)] + '"><img class="' + tree[Math.floor(Math.random() * tree.length)] + '" src="' + src10[Math.floor(Math.random() * src10.length)] + '"></div>').appendTo('#banner');
+
+
+// header scrolling
+window.onscroll = function() { myFunction() };
+
+var header = document.getElementById("myheader");
+var menu_list = document.getElementById("menu-list");
+var sticky = header.offsetTop;
+
+function myFunction() {
+    if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+        menu_list.classList.add("menlist");
+    } else {
+        header.classList.remove("sticky");
+        menu_list.classList.remove("menlist");
+    }
+}
+
+
+//menu active
+var menu = document.getElementById("menu-list");
+var btns = menu.getElementsByClassName("nav-item");
+for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+    });
+}
+
+//Catagory active
+var menu1 = document.getElementById("myBtnContainer");
+var btn1 = menu1.getElementsByClassName("btn-cat");
+for (var i = 0; i < btn1.length; i++) {
+    btn1[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+    });
+}
