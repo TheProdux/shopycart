@@ -18,6 +18,9 @@
 </head>
 
 <body>
+    <div class="loading" id="loading">
+        <div class="preload"></div>
+    </div>
 
     <nav class="navbar navbar-expand-lg navbar-light col-md-12" id="myheader">
         <a class="navbar-brand" href="index.html"><img src="img/shopycrtlogo.png"></a>
@@ -75,26 +78,21 @@
         <h1>STORE</h1>
 
 
-
         <h2>Catagory</h2>
 
-        <div id="myBtnContainer" class=" col-md-4">
-            <ul>
-                <button class="btn btn-cat active" onclick="filterSelection('all')"> Show all</button>
-                <li></li>
-                <li></li>
-                <button class="btn btn-cat" onclick="filterSelection('electronic')"> Electronics</button>
-                <li></li>
-                <button class="btn btn-cat" onclick="filterSelection('fancy')">Fancy</button>
-                <li></li>
-                <li> <button class="btn btn-cat" onclick="filterSelection('foods')">Foods</button></li>
-            </ul>
 
 
+
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+            <button class="btn" onclick="filterSelection('cars')"> Electronic</button>
+            <button class="btn" onclick="filterSelection('animals')">Fancy</button>
+            <button class="btn" onclick="filterSelection('fruits')">Foods</button>
+            <button class="btn" onclick="filterSelection('colors')">Dress</button>
         </div>
 
         <div class="container">
-            <div class="filterDiv fancy">
+            <div class="filterDiv cars">
                 <div class="ele1">
                     <img src="img/price-side.png">
                     <div class="over">
@@ -107,7 +105,7 @@
                     </div>
                 </div>
             </div>
-            <div class="filterDiv colors foods">
+            <div class="filterDiv cars">
                 <div class="ele2">
                     <img src="img/price-side.png">
                     <div class="over">
@@ -121,7 +119,7 @@
                     </div>
                 </div>
             </div>
-            <div class="filterDiv electronic">
+            <div class="filterDiv colors">
                 <div class="ele3">
                     <img src="img/price-side.png">
                     <div class="over">
@@ -134,7 +132,7 @@
                     </div>
                 </div>
             </div>
-            <div class="filterDiv colors fancy">
+            <div class="filterDiv cars animals">
                 <div class="ele4">
                     <img src="img/price-side.png">
                     <div class="over">
@@ -148,7 +146,7 @@
                     </div>
                 </div>
             </div>
-            <div class="filterDiv foods">
+            <div class="filterDiv colors">
                 <div class="ele1">
                     <img src="img/price-side.png">
                     <div class="over">
@@ -161,7 +159,7 @@
                     </div>
                 </div>
             </div>
-            <div class="filterDiv colors electronic">
+            <div class="filterDiv animals">
                 <div class="ele2">
                     <img src="img/price-side.png">
                     <div class="over">
@@ -175,7 +173,7 @@
                     </div>
                 </div>
             </div>
-            <div class="filterDiv foods">
+            <div class="filterDiv animals">
                 <div class="ele3">
                     <img src="img/price-side.png">
                     <div class="over">
@@ -188,7 +186,61 @@
                     </div>
                 </div>
             </div>
-            <div class="filterDiv colors fancy">
+            <div class="filterDiv fruits">
+                <div class="ele4">
+                    <img src="img/price-side.png">
+                    <div class="over">
+
+                        <a href="#">
+                            <i class="fas fa-eye"></i></a>
+                    </div>
+                    <div class="price-side4">
+                        <i class="fas fa-rupee-sign">.000</i>
+                        <a href="#"><button type="button" class="btn-price4 btn-small btn btn-success"><p>Buy</p></button> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="filterDiv fruits animals">
+                <div class="ele1">
+                    <img src="img/price-side.png">
+                    <div class="over">
+                        <a href="#">
+                            <i class="fas fa-eye"></i></a>
+                    </div>
+                    <div class="price-side1">
+                        <i class="fas fa-rupee-sign">.000</i>
+                        <a href="#"><button type="button" class="btn-price1 btn-small btn btn-success"><p>Buy</p></button> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="filterDiv fruits">
+                <div class="ele2">
+                    <img src="img/price-side.png">
+                    <div class="over">
+
+                        <a href="#">
+                            <i class="fas fa-eye"></i></a>
+                    </div>
+                    <div class="price-side2">
+                        <i class="fas fa-rupee-sign">.000</i>
+                        <a href="#"><button type="button" class="btn-price2 btn-small btn btn-success"><p>Buy</p></button> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="filterDiv fruits">
+                <div class="ele3">
+                    <img src="img/price-side.png">
+                    <div class="over">
+                        <a href="#">
+                            <i class="fas fa-eye"></i></a>
+                    </div>
+                    <div class="price-side3">
+                        <i class="fas fa-rupee-sign">.000</i>
+                        <a href="#"><button type="button" class="btn-price3 btn-small btn btn-success"><p>Buy</p></button> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="filterDiv animals">
                 <div class="ele4">
                     <img src="img/price-side.png">
                     <div class="over">
@@ -203,45 +255,57 @@
                 </div>
             </div>
         </div>
-    </div>
-    <script>
-        filterSelection("all")
 
-        function filterSelection(c) {
-            var x, i;
-            x = document.getElementsByClassName("filterDiv");
-            if (c == "all") c = "";
-            for (i = 0; i < x.length; i++) {
-                w3RemoveClass(x[i], "show");
-                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-            }
-        }
+        <script>
+            filterSelection("all")
 
-        function w3AddClass(element, name) {
-            var i, arr1, arr2;
-            arr1 = element.className.split(" ");
-            arr2 = name.split(" ");
-            for (i = 0; i < arr2.length; i++) {
-                if (arr1.indexOf(arr2[i]) == -1) {
-                    element.className += " " + arr2[i];
+            function filterSelection(c) {
+                var x, i;
+                x = document.getElementsByClassName("filterDiv");
+                if (c == "all") c = "";
+                for (i = 0; i < x.length; i++) {
+                    w3RemoveClass(x[i], "show");
+                    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
                 }
             }
-        }
 
-        function w3RemoveClass(element, name) {
-            var i, arr1, arr2;
-            arr1 = element.className.split(" ");
-            arr2 = name.split(" ");
-            for (i = 0; i < arr2.length; i++) {
-                while (arr1.indexOf(arr2[i]) > -1) {
-                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+            function w3AddClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                    if (arr1.indexOf(arr2[i]) == -1) {
+                        element.className += " " + arr2[i];
+                    }
                 }
             }
-            element.className = arr1.join(" ");
-        }
-    </script>
+
+            function w3RemoveClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                    while (arr1.indexOf(arr2[i]) > -1) {
+                        arr1.splice(arr1.indexOf(arr2[i]), 1);
+                    }
+                }
+                element.className = arr1.join(" ");
+            }
+
+            // Add active class to the current button (highlight it)
+            var btnContainer = document.getElementById("myBtnContainer");
+            var btns = btnContainer.getElementsByClassName("btn");
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click", function() {
+                    var current = document.getElementsByClassName("active");
+                    current[0].className = current[0].className.replace(" active", "");
+                    this.className += " active";
+                });
+            }
+        </script>
 
 </body>
+
 
 </html>
 
@@ -255,7 +319,8 @@
 <script src="app.js"></script>
 
 
-
+<script>
+</script>
 <!-- DO NOT DELETE -->
 <script>
     (function(i, s, o, g, r, a, m) {

@@ -1150,6 +1150,55 @@ body {}
     transition: .5s;
 }
 
+.loading {
+    position: absolute;
+    top: 0;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: #fff;
+    -webkit-animation: seconds 1.0s forwards;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-delay: 10s;
+    animation: seconds 1.0s forwards;
+    animation-iteration-count: 1;
+    animation-delay: 10s;
+    position: relative;
+    transition: 2s;
+}
+
+.preload {
+    margin: 0 auto;
+    width: 50vw;
+    height: 50vw;
+    background-image: url(../img/pre-loader-2.gif);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 0vh;
+}
+
+@-webkit-keyframes seconds {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        left: -9999px;
+        position: absolute;
+    }
+}
+
+@keyframes seconds {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        left: -9999px;
+        position: absolute;
+    }
+}
+
 
 /*-------------Media Query-------------------*/
 
@@ -1166,6 +1215,16 @@ body {}
 /*-------------Media Query-------------------*/
 
 @media only screen and (max-width: 768px) {
+    .preload {
+        margin: 0 auto;
+        width: 50vw;
+        height: 50vw;
+        background-image: url(../img/pre-loader-2.gif);
+        background-size: 200%;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-top: 40vh;
+    }
     .collapse1 {
         background: #c1272d;
         color: rgb(255, 255, 255) !important;

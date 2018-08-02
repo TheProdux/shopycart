@@ -34,6 +34,8 @@ nav {
 #myBtnContainer {
     position: relative;
     height: auto;
+    text-align: center;
+    box-shadow: 0px 1px 3px -1px black;
 }
 
 .filterDiv {
@@ -45,7 +47,7 @@ nav {
     margin: 2px;
     height: 40vh;
     display: none;
-    margin-left: 5vw;
+    margin-left: 8vw;
     margin-top: 5vh;
     box-shadow: 0 0 6px #565555;
 }
@@ -111,8 +113,8 @@ nav {
 .price-side3 {
     position: relative;
     float: right;
-    top: -26vh;
-    left: 21vw;
+    top: -64vh;
+    left: 3vw;
     margin-top: 14vh;
     margin-right: 0vh;
     height: 60%;
@@ -188,13 +190,11 @@ nav {
 .ele3 img {
     width: 63%;
     height: 100%;
-    float: right;
-    margin-left: -0.2vw;
-    -ms-transform: rotate(270deg);
-    /* IE 9 */
-    -webkit-transform: rotate(270deg);
-    /* Safari 3-8 */
-    transform: rotate(270deg);
+    float: left;
+    margin-left: 10.8vw;
+    -webkit-transform: scaleX(1);
+    transform: rotate(180deg);
+    transform: scaleY(-1);
 }
 
 .ele4 img {
@@ -232,7 +232,7 @@ nav {
     display: block;
 }
 
-.container {
+.contain {
     width: 80%;
     /* float: right; */
     margin-top: -40vh;
@@ -252,6 +252,7 @@ nav {
     cursor: pointer;
     font-size: 2vw;
     text-align: left;
+    font-weight: bold;
 }
 
 .btn:hover {
@@ -303,4 +304,187 @@ nav {
     font-size: 21px !important;
     text-align: center !important;
     margin-top: -2vh !important;
+}
+
+.dropdown {}
+
+
+/*-------------Media Query-------------------*/
+
+
+/*-------------Media Query-------------------*/
+
+
+/*-------------Media Query-------------------*/
+
+
+/*-------------Media Query-------------------*/
+
+
+/*-------------Media Query-------------------*/
+
+@media only screen and (max-width:768px) {
+    #myBtnContainer {
+        z-index: 1;
+        position: fixed;
+        height: auto;
+        width: 100vw;
+        top: 6vh;
+        background: #ef5a24;
+        left: 0;
+    }
+    #myBtnContainer ul {
+        list-style: none;
+        width: 100vw;
+    }
+    .btn-cat.active {
+        color: #ffffff;
+        font-weight: bold;
+        border: none !important;
+    }
+    .btn {
+        position: relative;
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: #ef5a24;
+        cursor: pointer;
+        font-size: 3vw;
+        text-align: left;
+        float: left;
+        margin-left: 2vw;
+        width: 18vw;
+    }
+    .store h2 {
+        display: none;
+    }
+    .store {
+        position: relative;
+        height: 20vh;
+        margin-top: 13vh;
+    }
+    .contain {
+        width: 100%;
+        /* float: right; */
+        margin-top: 0vh;
+        /* overflow: scroll; */
+        height: 133vh;
+        margin-left: 0vw;
+    }
+    element.style {}
+    .show {
+        display: block;
+    }
+    .filterDiv {
+        float: left;
+        color: #ffffff;
+        width: 37vw;
+        line-height: 25vh;
+        text-align: center;
+        margin: 2px;
+        height: 25vh;
+        display: block;
+        margin-left: 4vw;
+        margin-top: 5vh;
+        box-shadow: 0 0 6px #565555;
+    }
+    .ele1,
+    .ele2,
+    .ele3,
+    .ele4 {
+        width: 97%;
+        height: 74%;
+        margin-top: 0.7vh;
+        margin-left: 0.4vw;
+        background-size: 120%;
+        background-position: bottom;
+        background-position-x: 75%;
+        border-bottom: 0.5px solid #908f8f;
+    }
+    .ele1 img,
+    .ele2 img,
+    .ele3 img,
+    .ele4 img {
+        display: none;
+    }
+    .over {
+        width: 10vw;
+        position: absolute;
+        float: left;
+        height: auto;
+        background: #ffffff;
+        opacity: 1;
+        margin-top: 18vh;
+        box-shadow: 0px -0.5px 3px #777575;
+    }
+    .over i {
+        position: absolute;
+        top: -13vh;
+        left: 2vw;
+        font-size: 5vw;
+        color: #ef5a24;
+    }
+    .price-side1,
+    .price-side2,
+    .price-side3,
+    .price-side4,
+    .price-side5,
+    .price-side6,
+    .price-side7,
+    .price-side8,
+    .price-side9 {
+        position: relative;
+        float: right;
+        top: 13vh;
+        left: 3vw;
+        margin-top: 6vh;
+        margin-right: 2vh;
+        height: 5vh;
+        width: 75%;
+    }
+    .price-side1 i,
+    .price-side2 i,
+    .price-side3 i,
+    .price-side4 i,
+    .price-side5 i,
+    .price-side6 i,
+    .price-side7 i,
+    .price-side8 i,
+    .price-side9 i,
+    .price-side1 span,
+    .price-side2 span,
+    .price-side3 span,
+    .price-side4 span,
+    .price-side5 span,
+    .price-side6 span,
+    .price-side7 span,
+    .price-side8 span,
+    .price-side9 span {
+        color: #ef5a24;
+        margin-top: 0vh !important;
+        position: relative;
+        top: -10vh;
+        left: 1vh;
+        font-size: 3.5vw;
+    }
+    .btn-price1,
+    .btn-price2,
+    .btn-price3,
+    .btn-price4 {
+        background-color: #28a745;
+        width: 10vw;
+        height: 2vh;
+        margin-left: 4vw !important;
+        margin-top: 0.5vh;
+    }
+    .btn-price1 p,
+    .btn-price2 p,
+    .btn-price3 p,
+    .btn-price4 p {
+        position: relative;
+        font-size: 4vw !important;
+        text-align: center !important;
+        margin-top: -2vh !important;
+        left: -3vw;
+    }
 }
