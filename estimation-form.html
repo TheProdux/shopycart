@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html ng-app="Estimation">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Estimation | ShopyCart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+</head>
+
+<body>
+
+</body>
+<div class="content">
+    <h2>Estimation For Your Favourite Site</h2>
+    <button type="button" class="btn btn-large btn-primary esti">Estimate</button>
+</div>
+<form action="" method="post" class="form">
+    <div class="q">
+        <h2>Do You Want New Creative WebSite?</h2>
+        <button type="button" class="btn btn-large yes">Yes</button>
+        <button type="button" class="btn btn-large no">No</button>
+    </div>
+    <div class="q1">
+        <h2>What kind of service you are looking for ?</h2>
+        <div class="input">
+            <label class="radio">I Need Brand new Site 
+                <input type="radio" checked="checked" name="radio">
+                <span class="checkmark"></span>
+        </label>
+            <label class="radio">Redesign My Existing Site
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+        </label>
+        </div>
+        <button type="button" class="btn btn-small prev p1 "><i class="fas fa-arrow-left"></i></button>
+        <button type="button" class="btn btn-small next n1 "><i class="fas fa-arrow-right"></i></button>
+    </div>
+
+    <div class="q2">
+        <h2>Do you want your website be responsive for multiple devices ?</h2>
+        <div class="input">
+            <label class="radio">Yes! my website to be compatible for Desktops, Laptops, Mobiles, Tablets.
+                        <input type="radio" checked="checked" name="radio">
+                        <span class="checkmark"></span>
+                      </label>
+            <label class="radio">No!
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                      </label>
+        </div>
+        <button type="button" class="btn btn-small prev p2 "><i class="fas fa-arrow-left"></i></button>
+        <button type="button" class="btn btn-small next n2 "><i class="fas fa-arrow-right"></i></button>
+    </div>
+
+</form>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+    $(document).ready(function() {
+        $(".esti").click(function() {
+            $(".q").fadeIn(1500);
+            $(".form").fadeIn(1500).show();
+            $(".q1").hide();
+            $(".q2").hide();
+
+        });
+        $(".no").click(function() {
+
+            $(".q").fadeOut(1500);
+            $(".form").fadeOut(2000);
+
+        });
+        $(".yes").click(function() {
+            $(".q").hide();
+            $(".q1").fadeIn(1500);
+        });
+        $(".n1").click(function() {
+            $(".q1").hide();
+            $(".q2").fadeIn(1500);
+        });
+        $(".p1").click(function() {
+            $(".q1").hide();
+            $(".q").fadeIn(1500);
+        });
+        $(".p2").click(function() {
+            $(".q2").hide();
+            $(".q1").fadeIn(1500);
+        });
+    });
+</script>
+
+
+<style>
+    .content {
+        margin: 0 auto;
+        background: #eee;
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .content h2 {
+        font-size: 4vw;
+        text-align: center;
+        color: #777;
+    }
+    
+    .content button {
+        float: right;
+        margin-right: 10vw;
+        margin-top: 5vh;
+    }
+    
+    .form {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.404);
+    }
+    
+    .q,
+    .q1,
+    .q2 {
+        width: 60%;
+        background: #fff;
+        position: relative;
+        top: 25%;
+        left: 20%;
+        border-radius: 4px;
+        box-shadow: 1px 2px 4px #3e3d3d;
+    }
+    
+    .q h2,
+    .q1 h2,
+    .q2 h2 {
+        font-size: 4vw;
+        color: #f05a24;
+        text-align: center;
+        line-height: 1.8;
+        border-bottom: 1px solid #ec9676;
+    }
+    
+    .q .yes {
+        position: relative;
+        left: 72%;
+        margin-right: 0%;
+        color: #007bff;
+        background: transparent;
+        font-size: 100%;
+        font-weight: bold;
+        margin-bottom: 1vh;
+    }
+    
+    .q .no {
+        position: relative;
+        right: 20%;
+        margin-left: 0%;
+        color: #dc3545;
+        background: transparent;
+        font-size: 100%;
+        font-weight: bold;
+        margin-bottom: 1vh;
+    }
+    
+    .input {
+        border-bottom: 1px solid #ec9676;
+    }
+    /* The container */
+    
+    .radio {
+        display: block;
+        position: relative;
+        padding-left: 41px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 4vw;
+        font-weight: 500;
+        color: #f58f6a;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none
+    }
+    /* Hide the browser's default radio button */
+    
+    .radio input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+    /* Create a custom radio button */
+    
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 5%;
+        height: 2.7vh;
+        width: 5vw;
+        background-color: #ddd;
+        border-radius: 50%;
+    }
+    /* On mouse-over, add a grey background color */
+    
+    .radio:hover input~.checkmark {
+        background-color: #ccc;
+    }
+    /* When the radio button is checked, add a blue background */
+    
+    .radio input:checked~.checkmark {
+        background-color: #08c;
+    }
+    /* Create the indicator (the dot/circle - hidden when not checked) */
+    
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+    /* Show the indicator (dot/circle) when checked */
+    
+    .radio input:checked~.checkmark:after {
+        display: block;
+    }
+    /* Style the indicator (dot/circle) */
+    
+    .radio .checkmark:after {
+        top: 0.9vh;
+        left: 1.5vw;
+        width: 2vw;
+        height: 1vh;
+        border-radius: 50%;
+        background: white;
+    }
+    
+    .next {
+        position: relative;
+        left: 55%;
+        margin-bottom: 2%;
+        margin-top: 2%;
+        background: transparent;
+        color: #007bff;
+        font-size: 125%;
+    }
+    
+    .prev {
+        position: relative;
+        left: 5%;
+        margin-bottom: 2%;
+        margin-top: 2%;
+        background: transparent;
+        color: #5cb85c;
+        font-size: 125%;
+    }
+    /* The container */
+    
+    .check {
+        display: block;
+        position: relative;
+        padding-left: 20%;
+        margin-bottom: 10%;
+        margin-top: 3vh;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        font-size: 4vw;
+        font-weight: 500;
+        color: #f58f6a;
+    }
+    /* Hide the browser's default checkbox */
+    
+    .check input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+    /* Create a custom checkbox */
+    
+    .check .checkmark {
+        position: absolute;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+    }
+    /* On mouse-over, add a grey background color */
+    
+    .check:hover input~.checkmark {
+        background-color: #ccc;
+    }
+    /* When the checkbox is checked, add a blue background */
+    
+    .check input:checked~.checkmark {
+        background-color: #2196F3;
+    }
+    /* Create the checkmark/indicator (hidden when not checked) */
+    
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+    /* Show the checkmark when checked */
+    
+    .check input:checked~.checkmark:after {
+        display: block;
+    }
+    /* Style the checkmark/indicator */
+    
+    .check .checkmark:after {
+        left: 10px;
+        top: 6px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+</style>
+
+</html>
