@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.css" />
 </head>
 
 <body>
@@ -18,47 +19,84 @@
     <h2>Estimation For Your Favourite Site</h2>
     <button type="button" class="btn btn-large btn-primary esti">Estimate</button>
 </div>
-<form action="" method="post" class="form">
+<form action="mail.php" method="post" class="form">
     <div class="q">
         <h2>Do You Want New Creative WebSite?</h2>
         <button type="button" class="btn btn-large yes">Yes</button>
         <button type="button" class="btn btn-large no">No</button>
+        <button type="button" class="btn btn-large exit">Exit</button>
     </div>
     <div class="q1">
         <h2>What kind of service you are looking for ?</h2>
         <div class="input">
             <label class="radio">I Need Brand new Site 
-                <input type="radio" checked="checked" name="radio">
+                <input type="radio" checked="checked" name="radio1" value="I Need Brand new Site ">
                 <span class="checkmark"></span>
         </label>
             <label class="radio">Redesign My Existing Site
-                <input type="radio" name="radio">
+                <input type="radio" name="radio1" value="Redesign My Existing Site">
                 <span class="checkmark"></span>
         </label>
         </div>
-        <button type="button" class="btn btn-small prev p1 "><i class="fas fa-arrow-left"></i></button>
+        <button type="button" class="btn btn-small prev pre1 "><i class="fas fa-arrow-left"></i></button>
         <button type="button" class="btn btn-small next n1 "><i class="fas fa-arrow-right"></i></button>
+
     </div>
 
     <div class="q2">
         <h2>Do you want your website be responsive for multiple devices ?</h2>
         <div class="input">
             <label class="radio">Yes! my website to be compatible for Desktops, Laptops, Mobiles, Tablets.
-                        <input type="radio" checked="checked" name="radio">
+                        <input type="radio" checked="checked" name="radio2" value="Yes! my website to be compatible for Desktops, Laptops, Mobiles, Tablets">
                         <span class="checkmark"></span>
                       </label>
             <label class="radio">No!
-                        <input type="radio" name="radio">
+                        <input type="radio" name="radio2" value="No.! Need not responsive for multi[le devices">
                         <span class="checkmark"></span>
                       </label>
         </div>
-        <button type="button" class="btn btn-small prev p2 "><i class="fas fa-arrow-left"></i></button>
+        <button type="button" class="btn btn-small prev pre2 "><i class="fas fa-arrow-left"></i></button>
         <button type="button" class="btn btn-small next n2 "><i class="fas fa-arrow-right"></i></button>
+    </div>
+    <div class="q3">
+        <h2>Do you want your website be responsive for multiple devices ?</h2>
+        <div class="input">
+            <label class="radio">Yes! my website to be compatible for Desktops, Laptops, Mobiles, Tablets.
+                        <input type="radio" checked="checked" name="radio3" value="Yes">
+                        <span class="checkmark"></span>
+                      </label>
+            <label class="radio">No!
+                        <input type="radio" name="radio3" value="No">
+                        <span class="checkmark"></span>
+                      </label>
+        </div>
+        <button type="button" class="btn btn-small prev pre3 "><i class="fas fa-arrow-left"></i></button>
+        <button type="button" class="btn btn-small next n3 "><i class="fas fa-arrow-right"></i></button>
+    </div>
+    <div class="q4">
+        <h2>Please Enter Your Mail</h2>
+        <div class="input">
+
+            <input type="email" name="email" placeholder="someone@example.com">
+        </div>
+        <button type="button" class="btn btn-small prev pre4 "><i class="fas fa-arrow-left"></i></button>
+        <button type="button" class="btn btn-small next n4 "><i class="fas fa-arrow-right"></i></button>
+    </div>
+    <div class="submit-form">
+        <h2>Submition !</h2>
+        <button type="button" class="btn btn-large can btn-secondary">Cancel</button>
+        <button type="button" class="btn btn-large sub btn-primary">Submit</button>
+    </div>
+    <div class="success">
+        <img class="suc-img" src="img/tick.gif">
+        <img class="suc-img2" src="img/tick1.png">
+        <h2>Submitted.!</h2>
+        <button type="submit" class="btn btn-large suc btn-success">Done</button>
     </div>
 
 </form>
 
-
+<script src="js/jquery.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.js"></script>
 <script>
@@ -68,29 +106,69 @@
             $(".form").fadeIn(1500).show();
             $(".q1").hide();
             $(".q2").hide();
+            $(".q3").hide();
+            $(".q4").hide();
+            $(".submit-form").hide();
+            $(".success").hide();
+            $(".content").css({
+                "opacity": "0.3"
+            });
 
         });
-        $(".no").click(function() {
-
+        $(".exit").click(function() {
             $(".q").fadeOut(1500);
             $(".form").fadeOut(2000);
-
+            $(".content").css({
+                "opacity": "1"
+            });
         });
         $(".yes").click(function() {
             $(".q").hide();
             $(".q1").fadeIn(1500);
         });
+        $(".no").click(function() {
+            $(".q").hide();
+            $(".q3").fadeIn(1500);
+        });
         $(".n1").click(function() {
             $(".q1").hide();
             $(".q2").fadeIn(1500);
         });
-        $(".p1").click(function() {
+        $(".pre1").click(function() {
             $(".q1").hide();
             $(".q").fadeIn(1500);
         });
-        $(".p2").click(function() {
+        $(".pre2").click(function() {
             $(".q2").hide();
             $(".q1").fadeIn(1500);
+        });
+        $(".pre3").click(function() {
+            $(".q3").hide();
+            $(".q").fadeIn(1500);
+        });
+        $(".n2").click(function() {
+            $(".q2").hide();
+            $(".q4").fadeIn(1500);
+        });
+        $(".n3").click(function() {
+            $(".q3").hide();
+            $(".q4").fadeIn(1500);
+        });
+        $(".n4").click(function() {
+            $(".q4").hide();
+            $(".submit-form").fadeIn(1500);
+        });
+        $(".can").click(function() {
+            $(".form").fadeOut(1000);
+        });
+        $(".sub").click(function() {
+            $(".submit-form").hide();
+            $(".success").fadeIn(1500);
+            $(".suc-img").fadeOut(2500);
+            $(".suc-img2").fadeIn(2000);
+        });
+        $(".suc").click(function() {
+            $(".form").fadeOut(2000);
         });
     });
 </script>
@@ -124,54 +202,93 @@
         width: 100%;
         height: 100vh;
         background: rgba(0, 0, 0, 0.404);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
     
     .q,
     .q1,
-    .q2 {
-        width: 60%;
-        background: #fff;
+    .q2,
+    .q3,
+    .q4,
+    .submit-form,
+    .success {
+        width: 80%;
         position: relative;
-        top: 25%;
-        left: 20%;
+        top: 18%;
+        left: 10%;
         border-radius: 4px;
-        box-shadow: 1px 2px 4px #3e3d3d;
     }
     
     .q h2,
     .q1 h2,
-    .q2 h2 {
-        font-size: 4vw;
-        color: #f05a24;
+    .q2 h2,
+    .q3 h2,
+    .q4 h2,
+    .submit-form h2 {
+        font-size: 6vw;
+        color: #f1f1f1;
         text-align: center;
         line-height: 1.8;
-        border-bottom: 1px solid #ec9676;
+        font-weight: bold;
+        border-bottom: 1px solid #8b26ff;
+    }
+    
+    .success h2 {
+        font-size: 7vw;
+        color: limegreen;
+        text-align: center;
+        line-height: 1.8;
+        border-bottom: 1px solid #8b26ff;
+    }
+    
+    .success img {
+        width: 68%;
+        margin-left: 15%;
+        margin-top: 2%;
+    }
+    
+    .suc-img {
+        position: absolute;
     }
     
     .q .yes {
         position: relative;
-        left: 72%;
+        left: 80%;
         margin-right: 0%;
+        top: 10vh;
         color: #007bff;
         background: transparent;
-        font-size: 100%;
+        font-size: 175%;
         font-weight: bold;
         margin-bottom: 1vh;
     }
     
     .q .no {
         position: relative;
-        right: 20%;
+        right: 28%;
+        top: 10vh;
         margin-left: 0%;
-        color: #dc3545;
+        color: #e4e0e0;
         background: transparent;
-        font-size: 100%;
+        font-size: 175%;
+        font-weight: bold;
+        margin-bottom: 1vh;
+    }
+    
+    .q .exit {
+        position: relative;
+        left: 33%;
+        top: 58vh;
+        margin-left: 0%;
+        color: #d4d1d1;
+        background: transparent;
+        font-size: 175%;
         font-weight: bold;
         margin-bottom: 1vh;
     }
     
     .input {
-        border-bottom: 1px solid #ec9676;
+        border-bottom: 1px solid #8b26ff;
     }
     /* The container */
     
@@ -180,14 +297,15 @@
         position: relative;
         padding-left: 41px;
         margin-bottom: 12px;
+        margin-top: 10%;
         cursor: pointer;
-        font-size: 4vw;
-        font-weight: 500;
-        color: #f58f6a;
+        font-size: 5vw;
+        font-weight: bold;
+        color: #ffffff;
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
-        user-select: none
+        user-select: none;
     }
     /* Hide the browser's default radio button */
     
@@ -242,22 +360,22 @@
     
     .next {
         position: relative;
-        left: 55%;
+        left: 68%;
         margin-bottom: 2%;
-        margin-top: 2%;
+        margin-top: 10%;
         background: transparent;
-        color: #007bff;
-        font-size: 125%;
+        color: #19ff00;
+        font-size: 175%;
     }
     
     .prev {
         position: relative;
-        left: 5%;
+        left: -3%;
         margin-bottom: 2%;
-        margin-top: 2%;
+        margin-top: 10%;
         background: transparent;
-        color: #5cb85c;
-        font-size: 125%;
+        color: #e0e0e0;
+        font-size: 175%;
     }
     /* The container */
     
@@ -326,6 +444,48 @@
         -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
         transform: rotate(45deg);
+    }
+    
+    .can {
+        margin-left: 0%;
+        margin-top: 15%;
+        margin-bottom: 10%;
+        background: transparent;
+        border: none;
+        color: gainsboro;
+        font-size: 160%;
+        font-weight: bold;
+    }
+    
+    .sub {
+        margin-left: 24%;
+        margin-top: 15%;
+        margin-bottom: 10%;
+        background: transparent;
+        border: none;
+        color: limegreen;
+        font-size: 160%;
+        font-weight: bold;
+    }
+    
+    .suc {
+        margin-left: 35%;
+        margin-top: 30%;
+        margin-bottom: 4%;
+        background: transparent;
+        border: none;
+        color: lime;
+        font-size: 160%;
+        font-weight: bold;
+    }
+    
+    .q4 input {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        width: 100%;
+        background: transparent;
+        border: none;
+        color: #f1f1f1;
     }
 </style>
 
