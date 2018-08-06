@@ -21,6 +21,7 @@ $email_address))
 
 if( empty($errors))
 {
+	echo "Radio value is:".$q1;
 	$to = $myemail; 
 	$email_subject = "Contact form submission: $email_address";
 	$email_body = "You have received a new message. ".

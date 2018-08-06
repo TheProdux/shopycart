@@ -1,0 +1,538 @@
+    input.invalid,
+    textarea.invalid {
+        border: 2px solid red;
+    }
+    
+    input.valid,
+    textarea.valid {
+        border: 2px solid green;
+    }
+    
+    .content {
+        z-index: -1;
+        margin: 0 auto;
+        background: #eee;
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .content h2 {
+        font-size: 4vw;
+        text-align: center;
+        color: #777;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .content button {
+        float: right;
+        margin-right: 10vw;
+        margin-top: 5vh;
+    }
+    
+    .form {
+        z-index: 0;
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: -webkit-fill-available;
+        background: #8b26ffab;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .q,
+    .q1,
+    .q2,
+    .q3,
+    .q4,
+    .submit-form,
+    .success {
+        width: 80%;
+        position: relative;
+        top: 18%;
+        left: 10%;
+        border-radius: 4px;
+    }
+    
+    .q h2,
+    .q1 h2,
+    .q2 h2,
+    .q3 h2,
+    .q4 h2,
+    .submit-form h2 {
+        font-size: 6vw;
+        color: #f1f1f1;
+        text-align: center;
+        line-height: 1.8;
+        border-bottom: 1px solid #8b26ff;
+    }
+    
+    .success h2 {
+        font-size: 7vw;
+        color: limegreen;
+        text-align: center;
+        line-height: 1.8;
+        border-bottom: 1px solid #8b26ff;
+    }
+    
+    .success img {
+        width: 68%;
+        margin-left: 15%;
+        margin-top: 2%;
+    }
+    
+    .suc-img {
+        position: absolute;
+    }
+    
+    .q-q {
+        margin-top: 15vh;
+    }
+    
+    .q .yes {
+        position: relative;
+        right: 0;
+        float: right;
+        margin-right: 0%;
+        top: 1vh;
+        color: yellow;
+        background: transparent;
+        font-size: 175%;
+        margin-bottom: 1vh;
+        border: 1px solid #fff;
+        border-radius: 0 !important;
+    }
+    
+    .yes:hover {
+        border: 1px solid #8b26ff;
+    }
+    
+    .q .no {
+        position: relative;
+        top: 1vh;
+        left: 1vw;
+        margin-left: 0%;
+        color: #e4e0e0;
+        background: transparent;
+        font-size: 175%;
+        margin-bottom: 1vh;
+        border: 1px solid #fff;
+        border-radius: 0 !important;
+    }
+    
+    .no:hover {
+        border: 1px solid #8b26ff;
+    }
+    
+    .q .exit {
+        margin-left: 90%;
+        color: #eae8e8;
+        margin-top: -20%;
+        background: #9046e4;
+        font-size: 125%;
+        font-weight: bold;
+        margin-bottom: 15%;
+        border-radius: 50%;
+    }
+    
+    .input {
+        border-bottom: 1px solid #8b26ff;
+    }
+    /* The container */
+    
+    .radio {
+        display: block;
+        position: relative;
+        padding-left: 41px;
+        margin-bottom: 12px;
+        margin-top: 10%;
+        cursor: pointer;
+        font-size: 5vw;
+        color: #ffffff;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    /* Hide the browser's default radio button */
+    
+    .radio input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+    /* Create a custom radio button */
+    
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 5%;
+        height: 2.7vh;
+        width: 5vw;
+        background-color: #ddd;
+        border-radius: 50%;
+    }
+    /* On mouse-over, add a grey background color */
+    
+    .radio:hover input~.checkmark {
+        background-color: #ccc;
+    }
+    /* When the radio button is checked, add a blue background */
+    
+    .radio input:checked~.checkmark {
+        background-color: #08c;
+    }
+    /* Create the indicator (the dot/circle - hidden when not checked) */
+    
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+    /* Show the indicator (dot/circle) when checked */
+    
+    .radio input:checked~.checkmark:after {
+        display: block;
+    }
+    /* Style the indicator (dot/circle) */
+    
+    .radio .checkmark:after {
+        top: 0.9vh;
+        left: 1.5vw;
+        width: 2vw;
+        height: 1vh;
+        border-radius: 50%;
+        background: white;
+    }
+    
+    .next {
+        position: relative;
+        left: 68%;
+        margin-bottom: 2%;
+        margin-top: 10%;
+        background: transparent;
+        color: #19ff00;
+        font-size: 175%;
+    }
+    
+    .prev {
+        position: relative;
+        left: -3%;
+        margin-bottom: 2%;
+        margin-top: 10%;
+        background: transparent;
+        color: #e0e0e0;
+        font-size: 175%;
+    }
+    /* The container */
+    
+    .check {
+        display: block;
+        position: relative;
+        padding-left: 20%;
+        margin-bottom: 10%;
+        margin-top: 3vh;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        font-size: 4vw;
+        color: #f58f6a;
+    }
+    /* Hide the browser's default checkbox */
+    
+    .check input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+    /* Create a custom checkbox */
+    
+    .check .checkmark {
+        position: absolute;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+    }
+    /* On mouse-over, add a grey background color */
+    
+    .check:hover input~.checkmark {
+        background-color: #ccc;
+    }
+    /* When the checkbox is checked, add a blue background */
+    
+    .check input:checked~.checkmark {
+        background-color: #2196F3;
+    }
+    /* Create the checkmark/indicator (hidden when not checked) */
+    
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+    /* Show the checkmark when checked */
+    
+    .check input:checked~.checkmark:after {
+        display: block;
+    }
+    /* Style the checkmark/indicator */
+    
+    .check .checkmark:after {
+        left: 10px;
+        top: 6px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    
+    .can {
+        margin-left: -5%;
+        margin-top: 15%;
+        margin-bottom: 10%;
+        background: transparent;
+        border: none;
+        color: gainsboro;
+        font-size: 160%;
+    }
+    
+    .sub {
+        margin-left: 20%;
+        margin-top: 15%;
+        margin-bottom: 10%;
+        background: transparent;
+        border: none;
+        color: limegreen;
+        font-size: 160%;
+    }
+    
+    .suc {
+        margin-left: 35%;
+        margin-top: 30%;
+        margin-bottom: 4%;
+        background: transparent;
+        border: none;
+        color: lime;
+        font-size: 160%;
+    }
+    
+    .q4 input {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        width: 100%;
+        background: transparent;
+        border: none;
+        color: #f1f1f1;
+        font-size: 6vw;
+    }
+    
+     ::placeholder {
+        color: rgb(204, 203, 203) !important;
+        font-size: 6vw !important;
+        opacity: 1;
+        /* Firefox */
+    }
+    
+     :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: rgb(204, 203, 203) !important;
+        font-size: 6vw !important;
+    }
+    
+     ::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: rgb(204, 203, 203) !important;
+        font-size: 6vw !important;
+    }
+    
+    @media only screen and (min-width: 768px) {
+        .form {
+            height: 100vh;
+        }
+        .q,
+        .q1,
+        .q2,
+        .q3,
+        .q4,
+        .submit-form {
+            width: 70vw;
+            position: relative;
+            top: 15%;
+            left: 14%;
+            border-radius: 4px;
+        }
+        .q h2,
+        .q1 h2,
+        .q2 h2,
+        .q3 h2,
+        .q4 h2,
+        .submit-form h2 {
+            font-size: 4vw;
+            color: #f1f1f1;
+            text-align: center;
+            line-height: 1.8;
+            border-bottom: 1px solid #8b26ff;
+        }
+        .q .exit {
+            margin-left: 114%;
+            color: #eae8e8;
+            margin-top: -9%;
+            background: #9046e4;
+        }
+        .q .yes {
+            position: relative;
+            right: 0;
+            float: right;
+            margin-right: 0%;
+            top: 1vh;
+            color: yellow;
+            background: transparent;
+            font-size: 2.5vw;
+            margin-bottom: 1vh;
+            font-weight: bold;
+        }
+        .q .no {
+            position: relative;
+            top: 1vh;
+            left: 1vw;
+            margin-left: 0%;
+            color: #e4e0e0;
+            background: transparent;
+            font-size: 2.5vw;
+            margin-bottom: 1vh;
+            font-weight: bold;
+        }
+        .radio {
+            display: block;
+            position: relative;
+            padding-left: 20%;
+            margin-bottom: 12px;
+            margin-top: 5%;
+            cursor: pointer;
+            font-size: 2.5vw;
+            color: #ffffff;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .checkmark {
+            position: absolute;
+            top: 14%;
+            left: 12%;
+            height: 6vh;
+            width: 3vw;
+            background-color: #ddd;
+            border-radius: 50%;
+        }
+        .radio .checkmark:after {
+            top: 1.8vh;
+            left: 0.8vw;
+            width: 1.4vw;
+            height: 2.5vh;
+            border-radius: 50%;
+            background: white;
+        }
+        .prev {
+            position: relative;
+            left: -3%;
+            margin-bottom: 0%;
+            margin-top: 5%;
+            background: transparent;
+            color: #e0e0e0;
+            font-size: 175% !important;
+        }
+        .next {
+            position: relative;
+            left: 90%;
+            margin-bottom: 0%;
+            margin-top: 5%;
+            background: transparent;
+            color: #19ff00;
+            font-size: 175% !important;
+        }
+        .input>input::after {
+            border: 0px solid #fff !important;
+        }
+        .sub {
+            float: right;
+            margin-top: 15%;
+            margin-bottom: 10%;
+            background: transparent !important;
+            border: none !important;
+            color: limegreen !important;
+            font-size: 175% !important;
+        }
+        .can {
+            margin-left: 0%;
+            margin-top: 15%;
+            margin-bottom: 10%;
+            background: transparent !important;
+            border: none !important;
+            color: gainsboro !important;
+            font-size: 175% !important;
+        }
+        .success {
+            height: 100vh;
+            width: 100vw;
+            background: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .success h2 {
+            font-size: 4vw;
+            color: limegreen;
+            width: 35vw;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 1.8;
+            border-bottom: 1px solid #8b26ff;
+        }
+        .success img {
+            width: 30%;
+            margin-left: 35%;
+            margin-top: 0%;
+        }
+        .suc {
+            margin-left: 46%;
+            margin-top: 10%;
+            margin-bottom: 4%;
+            background: transparent !important;
+            border: none !important;
+            color: lime !important;
+            font-size: 175% !important;
+        }
+        .q4 input {
+            margin-top: 5%;
+            margin-bottom: 5%;
+            width: 100%;
+            background: transparent;
+            border: none;
+            color: #f1f1f1;
+            font-size: 4vw;
+        }
+         ::placeholder {
+            color: rgb(204, 203, 203) !important;
+            font-size: 4vw !important;
+            opacity: 1;
+            /* Firefox */
+        }
+         :-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: rgb(204, 203, 203) !important;
+            font-size: 4vw !important;
+        }
+         ::-ms-input-placeholder {
+            /* Microsoft Edge */
+            color: rgb(204, 203, 203) !important;
+            font-size: 4vw !important;
+        }
+    }
