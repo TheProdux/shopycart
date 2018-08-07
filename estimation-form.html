@@ -10,7 +10,6 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
 </head>
 
@@ -30,7 +29,7 @@
             </div>
 
         </div>
-        <div class="q1">
+        <div class="qy1">
             <h2>What kind of service you are looking for ?</h2>
             <div class="input">
                 <label class="radio">I Need Brand new Site 
@@ -42,12 +41,12 @@
                 <span class="checkmark"></span>
         </label>
             </div>
-            <button type="button" class="btn btn-small prev pre1 "><i class="fas fa-arrow-left"></i></button>
-            <button type="button" class="btn btn-small next n1 "><i class="fas fa-arrow-right"></i></button>
+            <button type="button" class="btn btn-small prev prey1 "><i class="fas fa-arrow-left"></i></button>
+            <button type="button" class="btn btn-small next ny1 "><i class="fas fa-arrow-right"></i></button>
 
         </div>
 
-        <div class="q2">
+        <div class="qy2">
             <h2>Do you want your website be responsive for multiple devices ?</h2>
             <div class="input">
                 <label class="radio">Yes! my website to be compatible for Desktops, Laptops, Mobiles, Tablets.
@@ -59,10 +58,10 @@
                         <span class="checkmark"></span>
                       </label>
             </div>
-            <button type="button" class="btn btn-small prev pre2 "><i class="fas fa-arrow-left"></i></button>
-            <button type="button" class="btn btn-small next n2 "><i class="fas fa-arrow-right"></i></button>
+            <button type="button" class="btn btn-small prev prey2 "><i class="fas fa-arrow-left"></i></button>
+            <button type="button" class="btn btn-small next ny2 "><i class="fas fa-arrow-right"></i></button>
         </div>
-        <div class="q3">
+        <div class="qn1">
             <h2>Do you want your website be responsive for multiple devices ?</h2>
             <div class="input">
                 <label class="radio">Yes! my website to be compatible for Desktops, Laptops, Mobiles, Tablets.
@@ -74,17 +73,59 @@
                         <span class="checkmark"></span>
                       </label>
             </div>
+            <button type="button" class="btn btn-small prev pren1 "><i class="fas fa-arrow-left"></i></button>
+            <button type="button" class="btn btn-small next nn1 "><i class="fas fa-arrow-right"></i></button>
+        </div>
+        <div class="q2">
+            <h2>Please Enter Your Name</h2>
+            <div class="input name" title="Type Your Name">
+                <input type="text" name="username" placeholder="someone" id="username">
+            </div>
+            <button type="button" class="btn btn-small prev pre2 "><i class="fas fa-arrow-left"></i></button>
+            <button type="button" class="btn btn-small next n2"><i class="fas fa-arrow-right"></i></button>
+        </div>
+        <div class="q3">
+            <h2>Please Enter Your Mail</h2>
+            <div class="input mail" title="Type Your Email">
+
+                <input type="email" name="email" placeholder="someone@example.com" id="contact_mail">
+            </div>
             <button type="button" class="btn btn-small prev pre3 "><i class="fas fa-arrow-left"></i></button>
             <button type="button" class="btn btn-small next n3 "><i class="fas fa-arrow-right"></i></button>
         </div>
-        <div class="q4">
-            <h2>Please Enter Your Mail</h2>
+        <div class="qn2">
+            <h2>Check Box Selection</h2>
             <div class="input">
-
-                <input type="email" name="email" placeholder="someone@example.com" id="contact_mail" required data-validation-required-message="Please enter your name.">
+                <label class="check">One
+                    <input type="checkbox" name="check1" checked="checked" value="One">
+                    <span class="checkmark"></span>
+                  </label>
+                <label class="check">Two
+                    <input type="checkbox" name="check1" value="Two">
+                    <span class="checkmark"></span>
+                  </label>
+                <label class="check">Three
+                    <input type="checkbox" name="check1" value="Three">
+                    <span class="checkmark"></span>
+                  </label>
+                <label class="check">Four
+                    <input type="checkbox" name="check1" value="Four">
+                    <span class="checkmark"></span>
+                  </label>
             </div>
-            <button type="button" class="btn btn-small prev pre4 "><i class="fas fa-arrow-left"></i></button>
-            <button type="button" class="btn btn-small next n4 "><i class="fas fa-arrow-right"></i></button>
+            <button type="button" class="btn btn-small prev pren2 "><i class="fas fa-arrow-left"></i></button>
+            <button type="button" class="btn btn-small next nn2 "><i class="fas fa-arrow-right"></i></button>
+        </div>
+        <div class="q1">
+            <h2>Range Slider</h2>
+            <div class="input">
+                <div class="slide-range">
+                    <input type="range" min="1" max="3" value="0" class="slider" id="myRange">
+                    <p><span id="value"></span></p>
+                </div>
+            </div>
+            <button type="button" class="btn btn-small prev pre1 "><i class="fas fa-arrow-left"></i></button>
+            <button type="button" class="btn btn-small next n1"><i class="fas fa-arrow-right"></i></button>
         </div>
         <div class="submit-form">
             <h2>Submition !</h2>
@@ -108,13 +149,31 @@
 <script src="js/bootstrap.js"></script>
 <script>
     $(document).ready(function() {
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("value");
+        output.innerHTML = 'Normal <i class="fas fa-thumbs-up"></i>';
+        slider.oninput = function() {
+            var i = this.value;
+            if (i == 1) {
+                output.innerHTML = 'Normal <i class="fas fa-thumbs-up"></i>';
+            } else if (i == 2) {
+                output.innerHTML = 'Creative <i class="fas fa-palette"></i>';
+            } else {
+                output.innerHTML = 'Advance <i class="fas fa-mobile-alt"></i>';
+            }
+            //output.innerHTML = this.value;
+        }
+
         $(".esti").click(function() {
             $(".q").fadeIn(1500);
             $(".form").fadeIn(1500).show();
+            $(".qy1").hide();
+            $(".qy2").hide();
+            $(".qn1").hide();
+            $(".qn2").hide();
             $(".q1").hide();
             $(".q2").hide();
             $(".q3").hide();
-            $(".q4").hide();
             $(".submit-form").hide();
             $(".success").hide();
             $(".content").css({
@@ -131,45 +190,79 @@
         });
         $(".yes").click(function() {
             $(".q").hide();
-            $(".q1").fadeIn(1500);
+            $(".qy1").fadeIn(1500);
         });
         $(".no").click(function() {
             $(".q").hide();
-            $(".q3").fadeIn(1500);
+            $(".qn1").fadeIn(1500);
+        });
+        $(".ny1").click(function() {
+            $(".qy1").hide();
+            $(".qy2").fadeIn(1500);
+        });
+        $(".prey1").click(function() {
+            $(".qy1").hide();
+            $(".q").fadeIn(1500);
+        });
+        $(".prey2").click(function() {
+            $(".qy2").hide();
+            $(".qy1").fadeIn(1500);
+        });
+        $(".ny2").click(function() {
+            $(".qy2").hide();
+            $(".q1").fadeIn(1500);
+        });
+        $(".pren1").click(function() {
+            $(".qn1").hide();
+            $(".q").fadeIn(1500);
+        });
+        $(".nn1").click(function() {
+            $(".qn1").hide();
+            $(".qn2").fadeIn(1500);
+        });
+        $(".pren2").click(function() {
+            $(".qn2").hide();
+            $(".qn1").fadeIn(1500);
+        });
+        $(".nn2").click(function() {
+            $(".qn2").hide();
+            $(".q1").fadeIn(1500);
+        });
+        $(".pre1").click(function() {
+            $(".q1").hide();
+            $(".qy2").fadeIn(1500);
         });
         $(".n1").click(function() {
             $(".q1").hide();
             $(".q2").fadeIn(1500);
         });
-        $(".pre1").click(function() {
-            $(".q1").hide();
-            $(".q").fadeIn(1500);
-        });
         $(".pre2").click(function() {
             $(".q2").hide();
             $(".q1").fadeIn(1500);
-        });
+        })
+        $(".n2").click(function() {
+            if ($(".name>input").val() != "") {
+                $(".q2").hide();
+                $(".q3").fadeIn(1500);
+            } else {
+                alert("Please Write Your Name.!");
+                $(".q2").fadeIn(1000);
+            }
+        })
         $(".pre3").click(function() {
             $(".q3").hide();
-            $(".q").fadeIn(1500);
-        });
-        $(".n2").click(function() {
-            $(".q2").hide();
-            $(".q4").fadeIn(1500);
-        });
+            $(".q2").fadeIn(1500);
+        })
         $(".n3").click(function() {
-            $(".q3").hide();
-            $(".q4").fadeIn(1500);
-        });
-        $(".n4").click(function() {
-            if ($('.input>input').val() != "") {
-                $(".q4").hide();
+            if ($(".mail>input").val() != "") {
+                $(".q3").hide();
                 $(".submit-form").fadeIn(1500);
             } else {
-                alert("Please Write Your Email, hi!");
-                $(".q4").fadeIn(1000);
+                alert("Please Write Your Email.!");
+                $(".q3").fadeIn(1000);
             }
         });
+
         $(".can").click(function() {
             $(".form").fadeOut(1000);
         });
@@ -181,6 +274,7 @@
         });
         $(".suc").click(function() {
             $(".form").fadeOut(2000);
+            location.reload();
         });
     });
 </script>

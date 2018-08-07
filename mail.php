@@ -1,16 +1,21 @@
 <?php 
 $errors = '';
 $myemail = 'produxdesk@gmail.com';//<-----Put Your email address here.
-if(empty($_POST['radio1'])  || 
-if(empty($_POST['radio2'])  || 
-   empty($_POST['email']))
+if( empty($_POST['radio1'])  || 
+	empty($_POST['radio2'])  || 
+	empty($_POST['check1'])  ||
+	empty($_POST['email'])   ||
+	empty ($_POST['username']) )
 {
     $errors .= "\n Error: all fields are required";
 }
 
 $q2 = $_POST['radio1'];
 $q1 = $_POST['radio2']; 
-$email_address = $_POST['email']; 
+$email_address = $_POST['email'];
+$range = $_GET['i'];
+$check1 = $_POST['check1'];
+$u_name = $_POST['username'];
 
 if (!preg_match(
 "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i", 
@@ -25,7 +30,7 @@ if( empty($errors))
 	$to = $myemail; 
 	$email_subject = "Contact form submission: $email_address";
 	$email_body = "You have received a new message. ".
-	" Here are the details:\n Q1: $q1  \n Email: $q2 \nEmail: $email_address"; 
+	" Here are the details: \nName: $u_name \nEmail: $email_address \n Q1: $q1  \n Q2: $q2  \nRange: $range \nCheck: $check1"; 
 	
 	$headers = "From: $myemail\n"; 
 	$headers .= "Reply-To: $email_address";

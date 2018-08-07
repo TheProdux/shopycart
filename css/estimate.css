@@ -45,7 +45,10 @@
     .q1,
     .q2,
     .q3,
-    .q4,
+    .qy1,
+    .qy2,
+    .qn1,
+    .qn2,
     .submit-form,
     .success {
         width: 80%;
@@ -59,7 +62,10 @@
     .q1 h2,
     .q2 h2,
     .q3 h2,
-    .q4 h2,
+    .qy1 h2,
+    .qy2 h2,
+    .qn1 h2,
+    .qn2 h2,
     .submit-form h2 {
         font-size: 6vw;
         color: #f1f1f1;
@@ -360,7 +366,10 @@
         .q1,
         .q2,
         .q3,
-        .q4,
+        .qy1,
+        .qy2,
+        .qn1,
+        .qn2,
         .submit-form {
             width: 70vw;
             position: relative;
@@ -372,7 +381,10 @@
         .q1 h2,
         .q2 h2,
         .q3 h2,
-        .q4 h2,
+        .qy1 h2,
+        .qy2 h2,
+        .qn1 h2,
+        .qn2 h2,
         .submit-form h2 {
             font-size: 4vw;
             color: #f1f1f1;
@@ -442,21 +454,25 @@
         }
         .prev {
             position: relative;
-            left: -3%;
+            left: 40%;
             margin-bottom: 0%;
             margin-top: 5%;
             background: transparent;
             color: #e0e0e0;
             font-size: 175% !important;
+            border: 1px solid #fff !important;
+            border-radius: 0 !important;
         }
         .next {
             position: relative;
-            left: 90%;
+            left: 50%;
             margin-bottom: 0%;
             margin-top: 5%;
             background: transparent;
-            color: #19ff00;
+            color: yellow;
             font-size: 175% !important;
+            border: 1px solid #fff !important;
+            border-radius: 0 !important;
         }
         .input>input::after {
             border: 0px solid #fff !important;
@@ -464,20 +480,27 @@
         .sub {
             float: right;
             margin-top: 15%;
+            margin-right: 27%;
             margin-bottom: 10%;
             background: transparent !important;
             border: none !important;
-            color: limegreen !important;
+            color: yellow !important;
             font-size: 175% !important;
+            border: 1px solid #fff !important;
+            border-radius: 0 !important;
+            font-weight: bold !important;
         }
         .can {
-            margin-left: 0%;
+            margin-left: 27%;
             margin-top: 15%;
             margin-bottom: 10%;
             background: transparent !important;
             border: none !important;
             color: gainsboro !important;
             font-size: 175% !important;
+            border: 1px solid #fff !important;
+            border-radius: 0 !important;
+            font-weight: bold !important;
         }
         .success {
             height: 100vh;
@@ -489,7 +512,7 @@
         }
         .success h2 {
             font-size: 4vw;
-            color: limegreen;
+            color: #78b348;
             width: 35vw;
             margin: 0 auto;
             text-align: center;
@@ -503,14 +526,18 @@
         }
         .suc {
             margin-left: 46%;
-            margin-top: 10%;
+            margin-top: 8%;
             margin-bottom: 4%;
             background: transparent !important;
             border: none !important;
-            color: lime !important;
+            color: #78b348 !important;
             font-size: 175% !important;
+            font-weight: bold !important;
+            border: 1px solid #78b348 !important;
+            border-radius: 0 !important;
         }
-        .q4 input {
+        .q2 input,
+        .q3 input {
             margin-top: 5%;
             margin-bottom: 5%;
             width: 100%;
@@ -534,5 +561,109 @@
             /* Microsoft Edge */
             color: rgb(204, 203, 203) !important;
             font-size: 4vw !important;
+        }
+        /* The CheckBox */
+        .check {
+            display: block;
+            position: relative;
+            padding-left: 35%;
+            margin-bottom: 12px;
+            cursor: pointer;
+            color: #fff;
+            font-weight: bold;
+            font-size: 175%;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        /* Hide the browser's default checkbox */
+        .check input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+        /* Create a custom checkbox */
+        .check .checkmark {
+            position: absolute;
+            top: 20%;
+            left: 25%;
+            height: 25px;
+            width: 25px;
+            background-color: #eee;
+        }
+        /* On mouse-over, add a grey background color */
+        .check:hover input~.checkmark {
+            background-color: #ccc;
+        }
+        /* When the checkbox is checked, add a blue background */
+        .check input:checked~.checkmark {
+            background-color: #2196F3;
+        }
+        /* Create the checkmark/indicator (hidden when not checked) */
+        .check .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+        /* Show the checkmark when checked */
+        .check input:checked~.checkmark:after {
+            display: block;
+        }
+        /* Style the checkmark/indicator */
+        .check .checkmark:after {
+            left: 40%;
+            top: 23%;
+            width: 29%;
+            height: 48%;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        /* Range Slider */
+        .slide-range {
+            width: 100%;
+            margin-top: 10%;
+            margin-bottom: 8%;
+        }
+        .slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 20px;
+            background: #f3f3d1;
+            outline: none;
+            opacity: 1;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+            border-radius: 10px;
+        }
+        .slider:hover {
+            background: #adabab;
+        }
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 3vw;
+            height: 6vh;
+            background: yellow;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .slider::-moz-range-thumb {
+            width: 3vw;
+            height: 6vh;
+            background: yellow;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .slide-range p {
+            margin-top: 5%;
+            margin-left: 40%;
+            font-size: 2vw;
+            color: #fff;
+            font-weight: bold;
+            transition: 0.5s;
         }
     }
