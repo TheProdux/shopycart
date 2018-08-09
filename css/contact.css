@@ -1,0 +1,183 @@
+.contact-form {
+    background-image: url(../img/banner.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding-top: 10vh;
+    height: 100vh;
+}
+
+.contact-form h1 {
+    width: 80%;
+    font-size: 5vw;
+    color: #fff;
+    margin-left: 10%;
+    border-bottom: 2px dashed White;
+    text-align: center;
+    font-weight: 100;
+}
+
+.contact-form h2 {
+    margin-top: 3%;
+    font-size: 800%;
+    color: #fff;
+    margin-left: 0;
+    text-align: center;
+}
+
+.contact-form p {
+    font-size: 600%;
+    color: #fff;
+    margin-left: 0;
+    text-align: center;
+    margin-top: 1%;
+}
+
+form {
+    width: 50%;
+    margin-left: 2%;
+    float: left;
+}
+
+.input {
+    width: 60%;
+    height: 6%;
+    margin-top: 5%;
+    margin-left: 15%;
+    background: #ffffff;
+    border-radius: 15px;
+}
+
+.e {
+    margin-top: 4%;
+    margin-left: 15%;
+}
+
+.s {
+    width: 60%;
+}
+
+.m {
+    width: 60%;
+    height: 20vh;
+}
+
+.name,
+.email {
+    margin-left: 5%;
+    width: 90%;
+    margin-top: 0.5%;
+    height: 5%;
+    font-size: 1.5vw;
+    background: transparent;
+    border-radius: 0px !important;
+    color: #fff;
+    border: none;
+}
+
+.subject {
+    margin-left: 2%;
+    width: 90%;
+    margin-top: 0.5%;
+    height: 5%;
+    font-size: 1.5vw;
+    background: transparent;
+    border-radius: 0px !important;
+    color: #fff;
+    border: none;
+}
+
+.message {
+    margin-left: 2%;
+    width: 97%;
+    margin-top: 0.5%;
+    height: 19vh;
+    font-size: 1.5vw;
+    background: transparent;
+    border-radius: 0px !important;
+    color: #fff;
+    border: none;
+}
+
+.submit {
+    width: 30% !important;
+    margin-left: 30% !important;
+    margin-top: 4% !important;
+    height: 5vh !important;
+    font-size: 1vw !important;
+    border: 2px solid #fff !important;
+    cursor: pointer !important;
+    border-radius: 15px;
+    background: transparent;
+    box-shadow: none;
+}
+
+.im {
+    float: left;
+    margin-top: 4% !important;
+    margin-left: 0 !important;
+    font-size: 600% !important;
+}
+
+.img {
+    float: left;
+    margin-top: 4% !important;
+    margin-left: -4% !important;
+    font-size: 600% !important;
+}
+
+.address {
+    float: left;
+    width: 40%;
+    border-bottom: 2px dashed #fff;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.address p {
+    font-size: 500%;
+    margin-left: 8%;
+    margin-top: 5%;
+    text-align: left;
+}
+
+.media {
+    width: 24%;
+    margin-left: 14% !important;
+    float: left;
+    margin-top: 1%;
+}
+
+.media p {
+    font-size: 700%;
+    margin-left: 6%;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(73, 73, 73) !important;
+    font-size: 1.5vw;
+    font-weight: 400;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: rgb(73, 73, 73) !important;
+    font-size: 1.5vw;
+    font-weight: 400;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: rgb(73, 73, 73) !important;
+    font-size: 1.5vw;
+    font-weight: 400;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+    outline: none;
+}
