@@ -1,21 +1,20 @@
 <?php 
 $errors = '';
 $myemail = 'produxdesk@gmail.com';//<-----Put Your email address here.
-if( empty($_POST['radio1'])  || 
-	empty($_POST['radio2'])  || 
-	empty($_POST['check1'])  ||
-	empty($_POST['email'])   ||
-	empty ($_POST['username']) )
+/*if(empty($_POST['name'])  || 
+	empty($_POST['phone'])  || 
+   empty($_POST['email']) || 
+   empty($_POST['message']))
 {
     $errors .= "\n Error: all fields are required";
-}
+}*/
 
-$q2 = $_POST['radio1'];
-$q1 = $_POST['radio2']; 
-$email_address = $_POST['email'];
-$range = $_GET['i'];
-$check1 = $_POST['check1'];
-$u_name = $_POST['username'];
+$name = $_POST['name'];
+$email_address = $_POST['email']; 
+$q1 = $_POST['radio1'];
+$q2 = $_POST['radio2'];
+$q3 = $_POST['check1'];
+$q4 = $_POST['range'];
 
 if (!preg_match(
 "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i", 
@@ -26,11 +25,10 @@ $email_address))
 
 if( empty($errors))
 {
-	echo "Radio value is:".$q1;
 	$to = $myemail; 
-	$email_subject = "Contact form submission: $email_address";
+	$email_subject = "Contact form submission: $name";
 	$email_body = "You have received a new message. ".
-	" Here are the details: \nName: $u_name \nEmail: $email_address \n Q1: $q1  \n Q2: $q2  \nRange: $range \nCheck: $check1"; 
+	" Here are the details:\n Name: $name  \n Email: $email_address \n Q1: $q1 \n Q2: $q2 \n Q3: $q3 \n Q4: $q4"; 
 	
 	$headers = "From: $myemail\n"; 
 	$headers .= "Reply-To: $email_address";
@@ -60,12 +58,14 @@ echo nl2br($errors);
 $errors = '';
 $myemail = 'produxdesk@gmail.com';//<-----Put Your email address here.
 if(empty($_POST['name1'])  || 
+	empty($_POST['phone1'])  || 
    empty($_POST['email1']) || 
 {
     $errors .= "\n Error: all fields are required";
 }
 
 $name = $_POST['name1'];
+$phone = $_POST['phone1'];  
 $email_address = $_POST['email1']; 
 
 
@@ -81,7 +81,7 @@ if( empty($errors))
 	$to = $myemail; 
 	$email_subject = "Broucher Downloaded: $name";
 	$email_body = "You have received a new message. ".
-	" Here are the details:\n Name: $name  \n Email: $email_address \n Message \n $message"; 
+	" Here are the details:\n Name: $name \n Mobile:$phone \n Email: $email_address \n Message \n $message"; 
 	
 	$headers = "From: $myemail\n"; 
 	$headers .= "Reply-To: $email_address";
