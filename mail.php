@@ -1,5 +1,5 @@
 <?php 
-if(@$_POST['submit']){
+if(isset($_POST['submit']) ){
 //$errors = '';
 $myemail = 'produxdesk@gmail.com';//<-----Put Your email address here.
 /*if(empty($_POST['name'])  || 
@@ -23,9 +23,7 @@ $email_address))
 {
     $errors .= "\n Error: Invalid email address";
 }*/
-
-if( empty($errors))
-{
+//echo 	"<h1> Here are the details:</h1> <br> <p>Name:<p> $name  \n Email: $email_address \n Q1: $q1 \n Q2: $q2 \n Q3: $q3 \n Q4: $q4"; 
 	$to = $myemail; 
 	$email_subject = "Contact form submission: $name";
 	$email_body = "You have received a new message. ".
@@ -36,8 +34,8 @@ if( empty($errors))
 	
 	mail($to,$email_subject,$email_body,$headers);
 	//redirect to the 'thank you' page
-	header('Location: http://shopycart.com/new/index.html');
-} 
+	//header('Location: http://shopycart.com/new/index.html');
+ 
 }
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
@@ -49,7 +47,8 @@ if( empty($errors))
 <body>
 <!-- This page is displayed only if there is some error -->
 <?php
-//echo nl2br($errors);
+echo 	"<h1> Here are the details:</h1> <br> <p>Name:<p> $name  \n Email: $email_address \n Q1: $q1 \n Q2: $q2 \n Q3: $q3 \n Q4: $q4"; 
+
 ?>
 
 
