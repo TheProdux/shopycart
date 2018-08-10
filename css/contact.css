@@ -18,14 +18,14 @@
 
 .contact-form h2 {
     margin-top: 3%;
-    font-size: 800%;
+    font-size: 200%;
     color: #fff;
     margin-left: 0;
     text-align: center;
 }
 
 .contact-form p {
-    font-size: 600%;
+    font-size: 200%;
     color: #fff;
     margin-left: 0;
     text-align: center;
@@ -44,7 +44,7 @@ form {
     margin-top: 5%;
     margin-left: 15%;
     background: #ffffff;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 
 .e {
@@ -106,7 +106,7 @@ form {
     font-size: 1vw !important;
     border: 2px solid #fff !important;
     cursor: pointer !important;
-    border-radius: 15px;
+    border-radius: 5px;
     background: transparent;
     box-shadow: none;
 }
@@ -115,14 +115,14 @@ form {
     float: left;
     margin-top: 4% !important;
     margin-left: 0 !important;
-    font-size: 600% !important;
+    font-size: 150% !important;
 }
 
 .img {
     float: left;
     margin-top: 4% !important;
     margin-left: -4% !important;
-    font-size: 600% !important;
+    font-size: 150% !important;
 }
 
 .address {
@@ -130,11 +130,11 @@ form {
     width: 40%;
     border-bottom: 2px dashed #fff;
     margin-left: 5%;
-    margin-top: 5%;
+    margin-top: 0%;
 }
 
 .address p {
-    font-size: 500%;
+    font-size: 136%;
     margin-left: 8%;
     margin-top: 5%;
     text-align: left;
@@ -148,7 +148,7 @@ form {
 }
 
 .media p {
-    font-size: 700%;
+    font-size: 200%;
     margin-left: 6%;
 }
 

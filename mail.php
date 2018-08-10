@@ -1,5 +1,6 @@
 <?php 
-$errors = '';
+if(@$_POST['submit']){
+//$errors = '';
 $myemail = 'produxdesk@gmail.com';//<-----Put Your email address here.
 /*if(empty($_POST['name'])  || 
 	empty($_POST['phone'])  || 
@@ -9,19 +10,19 @@ $myemail = 'produxdesk@gmail.com';//<-----Put Your email address here.
     $errors .= "\n Error: all fields are required";
 }*/
 
-$name = $_POST['name'];
+$name = $_POST['username'];
 $email_address = $_POST['email']; 
 $q1 = $_POST['radio1'];
 $q2 = $_POST['radio2'];
 $q3 = $_POST['check1'];
 $q4 = $_POST['range'];
 
-if (!preg_match(
+/*if (!preg_match(
 "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i", 
 $email_address))
 {
     $errors .= "\n Error: Invalid email address";
-}
+}*/
 
 if( empty($errors))
 {
@@ -35,24 +36,27 @@ if( empty($errors))
 	
 	mail($to,$email_subject,$email_body,$headers);
 	//redirect to the 'thank you' page
-	header('Location: index.html');
+	header('Location: http://shopycart.com/new/index.html');
 } 
+}
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
 <html>
 <head>
-	<title>Contact form handler</title>
+	
 </head>
 
 <body>
 <!-- This page is displayed only if there is some error -->
 <?php
-echo nl2br($errors);
+//echo nl2br($errors);
 ?>
 
 
 </body>
 </html>
+
+
 <?php 
  if(@$_POST['submit']){
 $errors = '';
