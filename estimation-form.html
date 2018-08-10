@@ -19,7 +19,7 @@
         <h2>Estimation For Your Favourite Site</h2>
         <button type="button" class="btn btn-large btn-primary esti">Estimate</button>
     </div>
-    <form action="mail.php" method="post" class="form">
+    <div class="form">
         <div class="q">
             <button type="button" class="btn btn-large exit">x</button>
             <h2>Do You Want New Creative WebSite?</h2>
@@ -33,11 +33,11 @@
             <h2>What kind of service you are looking for ?</h2>
             <div class="input">
                 <label class="radio">I Need Brand new Site 
-                <input type="radio" checked="checked" name="radio1" value="I Need Brand new Site ">
+                <input type="radio" checked="checked" name="radio1" id="radio1" value="I Need Brand new Site ">
                 <span class="checkmark"></span>
         </label>
                 <label class="radio">Redesign My Existing Site
-                <input type="radio" name="radio1" value="Redesign My Existing Site">
+                <input type="radio" name="radio1" id="radio1" value="Redesign My Existing Site">
                 <span class="checkmark"></span>
         </label>
             </div>
@@ -97,19 +97,19 @@
             <h2>Check Box Selection</h2>
             <div class="input">
                 <label class="check">One
-                    <input type="checkbox" name="check1" checked="checked" value="One">
+                    <input type="checkbox" name="check1" class="chk" checked="checked" value="One">
                     <span class="checkmark"></span>
                   </label>
                 <label class="check">Two
-                    <input type="checkbox" name="check1" value="Two">
+                    <input type="checkbox" name="check1" class="chk1" value="Two">
                     <span class="checkmark"></span>
                   </label>
                 <label class="check">Three
-                    <input type="checkbox" name="check1" value="Three">
+                    <input type="checkbox" name="check1" class="chk1" value="Three">
                     <span class="checkmark"></span>
                   </label>
                 <label class="check">Four
-                    <input type="checkbox" name="check1" value="Four">
+                    <input type="checkbox" name="check1" class="chk1" value="Four">
                     <span class="checkmark"></span>
                   </label>
             </div>
@@ -141,10 +141,11 @@
             <h2>Submitted.!</h2>
             <button type="submit" name="submit" class="btn btn-large suc btn-success">Done</button>
         </div>
+    </div>
 
-    </form>
 </body>
 <script src="js/jquery.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.js"></script>
 <script>
@@ -273,8 +274,26 @@
             $(".suc-img2").fadeIn(2000);
         });
         $(".suc").click(function() {
-            $(".form").fadeOut(2000);
-            location.reload();
+            var name = $('#username').val();
+            var email = $('#contact_mail').val();
+            var radio1 = $("input[name='radio1']:checked").val();
+            var chkArray1 = [];
+            $(".chk1:checked").each(function() {
+                chkArray1.push($(this).val());
+            });
+            var selected1;
+            selected1 = chkArray1.join(',');
+            var varData = 'Name:' + name + 'Email:' + email + 'check:' + selected1 + 'Radio1:' + radio1;
+            console.log(varData);
+
+            $.ajax({
+                type: "post",
+                url: 'contact-form-handler.php',
+                data: varData,
+                success: function() {
+                    alert("it a success");
+                }
+            });
         });
     });
 </script>
