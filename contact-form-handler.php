@@ -92,14 +92,15 @@ if( empty($errors))
 
 
 
- $name = $_POST['username'];
- $mail = $_POST['email'];
- $radio1 = $_POST['radio1'];
- $myemail = 'vickyrobotic7@gmail.com';
+ $name = $_GET['name'];
+ $mail = $_GET['email'];
+ $radio1 = $_GET['radio1'];
+ $check1 = $_GET['selected1'];
+ $myemail = 'produxdesk@gmail.com';
  $to = $myemail; 
  $email_subject = "Broucher Downloaded: $name";
  $email_body = "You have received a new message. ".
-	" Here are the details:\n Name: $name  \n Email: $email_address \n radio1: $radio1 "; 
+	" Here are the details:\n Name: $name  \n Email: $email_address \n radio1: $radio1 \n Check: $check1"; 
 	
 
  mail($to,$email_subject,$email_body);
